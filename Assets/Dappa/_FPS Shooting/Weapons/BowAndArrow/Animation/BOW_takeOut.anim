@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: BOW_takeOut
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -271,7 +271,8 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
   m_ScaleCurves: []
   m_FloatCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -291,6 +292,7 @@ AnimationClip:
       (Reload Show)
     classID: 1
     script: {fileID: 0}
+    flags: 16
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -298,70 +300,7 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings:
-    - serializedVersion: 2
-      path: 1034236317
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 892829644
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1034236317
-      attribute: 4
-      script: {fileID: 0}
-      typeID: 4
-      customType: 4
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 892829644
-      attribute: 4
-      script: {fileID: 0}
-      typeID: 4
-      customType: 4
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 2777139817
-      attribute: 2086281974
-      script: {fileID: 0}
-      typeID: 1
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 632304947
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1605897902
-      attribute: 1
-      script: {fileID: 0}
-      typeID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 632304947
-      attribute: 4
-      script: {fileID: 0}
-      typeID: 4
-      customType: 4
-      isPPtrCurve: 0
-    - serializedVersion: 2
-      path: 1605897902
-      attribute: 4
-      script: {fileID: 0}
-      typeID: 4
-      customType: 4
-      isPPtrCurve: 0
+    genericBindings: []
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -384,7 +323,8 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -430,7 +370,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -476,7 +418,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -522,7 +466,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -568,7 +514,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -614,7 +562,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -660,7 +610,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -715,7 +667,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -770,7 +724,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -825,7 +781,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -880,7 +838,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -935,7 +895,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -990,7 +952,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1009,7 +973,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1028,7 +994,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1047,7 +1015,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1066,7 +1036,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1085,7 +1057,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1104,7 +1078,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1123,7 +1099,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1142,7 +1120,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1161,7 +1141,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1180,7 +1162,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1199,7 +1183,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1218,7 +1204,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1238,8 +1226,10 @@ AnimationClip:
       (Reload Show)
     classID: 1
     script: {fileID: 0}
+    flags: 16
   m_EulerEditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1249,7 +1239,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1259,7 +1251,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1269,7 +1263,9 @@ AnimationClip:
     path: BowAndArrow(Clone)
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1279,7 +1275,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1289,7 +1287,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1299,7 +1299,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R/forearm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1309,7 +1311,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1319,7 +1323,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1329,7 +1335,9 @@ AnimationClip:
     path: IK_Hand
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1339,7 +1347,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1349,7 +1359,9 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
@@ -1359,6 +1371,7 @@ AnimationClip:
     path: BowAndArrow(Clone)/StringPullBack/Arm/ArmRig/clavicle.R/deltoid.R/upper_arm.R
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
