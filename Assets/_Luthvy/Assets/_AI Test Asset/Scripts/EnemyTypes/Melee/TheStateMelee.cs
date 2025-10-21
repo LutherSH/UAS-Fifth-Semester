@@ -1,4 +1,4 @@
-public interface TheState
+public interface TheStateMelee
 {
     void Enter();
     void Update();

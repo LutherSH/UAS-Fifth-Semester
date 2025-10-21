@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AttackState : TheState
+public class AttackStateMelee : TheStateMelee
 {
 ///////////////////////////////////////////////////////////////////////
 /// PROPERTIES OF STATE
-    private EnemyAnimalAI enemy;
+    private EnemyMelee enemy;
     private Transform player;
-    public AttackState(EnemyAnimalAI enemyAI)//, Transform playerTrasform) // REGISTER STATE
+    public AttackStateMelee(EnemyMelee enemyAI)//, Transform playerTrasform) // REGISTER STATE
     {
         enemy = enemyAI;
     }
@@ -49,7 +49,7 @@ public class AttackState : TheState
 
         else
         {
-            enemy.SwitchState(new ChaseState(enemy));
+            enemy.SwitchState(new ChaseStateMelee(enemy));
         }
         
     }

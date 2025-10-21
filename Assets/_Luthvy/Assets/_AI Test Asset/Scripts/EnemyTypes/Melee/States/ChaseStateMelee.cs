@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class ChaseState : TheState
+public class ChaseStateMelee : TheStateMelee
 {
 ///////////////////////////////////////////////////////////////////////
 /// PROPERTIES OF STATE
-    private EnemyAnimalAI enemy;
+    private EnemyMelee enemy;
     //private Transform player;
 
-    public ChaseState(EnemyAnimalAI enemyAI) //Transform playerTransform) // REGISTER STATE AND THE PROPERTIES
+    public ChaseStateMelee(EnemyMelee enemyAI) //Transform playerTransform) // REGISTER STATE AND THE PROPERTIES
     {
         enemy = enemyAI;
         //player = playerTransform;
@@ -56,12 +56,12 @@ public void Update()
     if (enemy.playerInAttackRange == true)
     {
         //Debug.LogWarning("ATTACk");
-        enemy.SwitchState(new AttackState(enemy));
+        enemy.SwitchState(new AttackStateMelee(enemy));
     }
 
     else if (!enemy.playerInSightRange)
         {
-            enemy.SwitchState(new IdleState(enemy));
+            enemy.SwitchState(new IdleStateMelee(enemy));
         }
 }
 

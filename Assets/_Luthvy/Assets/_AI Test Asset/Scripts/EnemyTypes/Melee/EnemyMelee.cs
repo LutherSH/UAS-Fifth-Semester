@@ -3,13 +3,15 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 
-public class EnemyAnimalAI : MonoBehaviour
+public class EnemyMelee : MonoBehaviour
 {
-    private TheState currentState;
+    private TheStateMelee currentState;
+    public Collider hitCollider;
+    public GameObject hitBoxParent;
     public NavMeshAgent nAgent;
     public Transform player;
     public LayerMask theGround, thePlayer;
-    //public PlayerBehaviour playerBehaviour;
+    
 
     ///////////////////////////////////////////////////////////////////////
     ///// Property For Patrol
@@ -62,11 +64,12 @@ public class EnemyAnimalAI : MonoBehaviour
     {
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
+        hitCollider = GetComponent<Collider>();
     }
 
     void Start()
     {
-        SwitchState(new IdleState(this)); // IDLE
+        SwitchState(new IdleStateMelee(this)); // IDLE
         visionRange = sightRange;
         defaultFov = fov;
     }
@@ -135,11 +138,20 @@ public class EnemyAnimalAI : MonoBehaviour
     }
     ///////////////////////////////////////////////////////////////////////
     /// STATE SWITCHER
-    public void SwitchState(TheState newState)
+    public void SwitchState(TheStateMelee newState)
     {
         if (currentState != null) currentState.Exit();
         currentState = newState;
         currentState.Enter();
+    }
+
+    public void PermaDeath()
+    {
+        currentState.Exit();
+        hitCollider.enabled = false;
+        hitBoxParent.SetActive(false);
+        SwitchState(new DeadStateMelee(this));
+        return;
     }
 
     ///////////////////////////////////////////////////////////////////////

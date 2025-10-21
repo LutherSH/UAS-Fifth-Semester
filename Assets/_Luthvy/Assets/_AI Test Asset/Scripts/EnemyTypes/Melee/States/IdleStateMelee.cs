@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class IdleState : TheState
+public class IdleStateMelee : TheStateMelee
 {
 ///////////////////////////////////////////////////////////////////////
 /// PROPERTIES OF STATE
-    private EnemyAnimalAI enemy;
+    private EnemyMelee enemy;
     private float idleTimer;
     private float idleDuration;
 
-    public IdleState(EnemyAnimalAI enemyAI) // REGISTER STATE
+    public IdleStateMelee(EnemyMelee enemyAI) // REGISTER STATE
     {
         enemy = enemyAI;
         idleDuration = enemy.idleDuration;
@@ -33,14 +33,14 @@ public class IdleState : TheState
         if (enemy.playerInSightRange && !enemy.playerInAttackRange)
         {
             enemy.nAgent.isStopped = false;
-            enemy.SwitchState(new ChaseState(enemy));
+            enemy.SwitchState(new ChaseStateMelee(enemy));
             return;
         }
 
         else if (enemy.playerInSightRange && enemy.playerInAttackRange)
         {
             enemy.nAgent.isStopped = false;
-            enemy.SwitchState(new AttackState(enemy));
+            enemy.SwitchState(new AttackStateMelee(enemy));
             return;
         }
 
@@ -53,7 +53,7 @@ public class IdleState : TheState
                 enemy.nAgent.isStopped = false;
             }
 
-            enemy.SwitchState(new PatrolState(enemy));
+            enemy.SwitchState(new PatrolStateMelee(enemy));
         }
     }
 

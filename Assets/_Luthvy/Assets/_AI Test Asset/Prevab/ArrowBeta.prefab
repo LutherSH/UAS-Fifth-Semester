@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 474468780686578957}
   - component: {fileID: 8819725901195577763}
   - component: {fileID: 8100588145644192464}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ArrowBeta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64166af15b3ac54ba1afff0fe3ddf3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 1
   lifeTime: 3
   damageAmount: 10
 --- !u!54 &8819725901195577763

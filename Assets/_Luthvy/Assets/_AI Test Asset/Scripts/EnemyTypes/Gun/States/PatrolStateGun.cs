@@ -1,15 +1,15 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolState : TheState
+public class PatrolStateGun : TheStateGun
 {
 ///////////////////////////////////////////////////////////////////////
 /// PROPERTIES OF STATE
-    private EnemyAnimalAI enemy;
+    private EnemyGun enemy;
     private const float arriveTolerance = 0.5f;
     private const int sampleAttempts = 8;
 
-    public PatrolState(EnemyAnimalAI enemyAI) // REGISTER STATE
+    public PatrolStateGun(EnemyGun enemyAI) // REGISTER STATE
     {
         enemy = enemyAI;
     }
@@ -57,7 +57,7 @@ public class PatrolState : TheState
         if (enemy.nAgent.remainingDistance <= Mathf.Max(enemy.nAgent.stoppingDistance, arriveTolerance))
         {
             enemy.setAWalkPoint = false;
-            enemy.SwitchState(new IdleState(enemy));
+            enemy.SwitchState(new IdleStateGun(enemy));
         }
         
         // Face Direction
