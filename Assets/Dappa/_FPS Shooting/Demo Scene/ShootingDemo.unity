@@ -3131,7 +3131,7 @@ GameObject:
   - component: {fileID: 607465784}
   - component: {fileID: 607465783}
   - component: {fileID: 607465782}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: TopWater (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10530,7 +10530,7 @@ GameObject:
   - component: {fileID: 1662191425}
   - component: {fileID: 1662191424}
   - component: {fileID: 1662191423}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: TopWater (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11507,7 +11507,7 @@ GameObject:
   - component: {fileID: 1749290539}
   - component: {fileID: 1749290538}
   - component: {fileID: 1749290541}
-  m_Layer: 12
+  m_Layer: 11
   m_Name: TopWater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15656,7 +15656,7 @@ MonoBehaviour:
   changeTo: 10
   topWaterLayer:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2048
   cameraMovement: {fileID: 0}
   waterHelpers: []
 --- !u!1 &621964681871709934
@@ -69071,7 +69071,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a260213968ed1494cbac8b5161dcb39c, type: 2}
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
