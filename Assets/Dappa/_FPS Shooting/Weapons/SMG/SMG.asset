@@ -34,7 +34,7 @@ MonoBehaviour:
   burstTime: 0.125
   ammoClip: 30
   startingClips: 2
-  firerate: 0.1
+  firerate: 0.059
   fireDelay: 0
   fireCooldownSpeed: 1
   canFireWhileDelayed: 0

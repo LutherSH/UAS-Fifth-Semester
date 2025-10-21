@@ -9951,7 +9951,7 @@ GameObject:
   - component: {fileID: 1610666065}
   - component: {fileID: 1610666064}
   m_Layer: 0
-  m_Name: Terrain_(-481.13, -355.42, -973.97)
+  m_Name: Stage 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
