@@ -51,5 +51,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Hunters Hunted.sln"
+    "dotnet.defaultSolution": "UAS-Fifth-Semester.sln"
 }
