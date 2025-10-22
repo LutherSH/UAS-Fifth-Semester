@@ -3354,6 +3354,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -5947,7 +5948,7 @@ Transform:
   m_GameObject: {fileID: 229008913}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6407,6 +6408,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -8271,6 +8273,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -15251,7 +15254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &393352936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15268,7 +15271,19 @@ MonoBehaviour:
   health: 0
   onDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1767004434}
+        m_TargetAssemblyTypeName: EnemyGun, Assembly-CSharp
+        m_MethodName: Spooked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -15293,14 +15308,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393352935}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 252.43, y: -255.271, z: -996.07733}
+  m_LocalRotation: {x: -0, y: -0.5926861, z: -0, w: 0.8054336}
+  m_LocalPosition: {x: 252.44046, y: -255.271, z: -996.05695}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1767004432}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -72.696, z: 0}
 --- !u!1 &394423763
 GameObject:
   m_ObjectHideFlags: 0
@@ -16952,6 +16967,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -37086,6 +37102,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -66287,6 +66304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1534538850}
+  - component: {fileID: 1534538864}
   - component: {fileID: 1534538863}
   - component: {fileID: 1534538862}
   - component: {fileID: 1534538861}
@@ -66548,6 +66566,29 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!136 &1534538864
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534538849}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.325
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1535346101
 GameObject:
   m_ObjectHideFlags: 0
@@ -66702,7 +66743,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1544581549
 Transform:
   m_ObjectHideFlags: 0
@@ -66711,14 +66752,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544581547}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 248.03181, y: -255.271, z: -996.07733}
+  m_LocalRotation: {x: -0, y: -0.7855405, z: -0, w: 0.61881036}
+  m_LocalPosition: {x: 248.03812, y: -255.271, z: -996.0478}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2041128650}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -103.541, z: 0}
 --- !u!114 &1544581550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66735,7 +66776,19 @@ MonoBehaviour:
   health: 0
   onDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2041128646}
+        m_TargetAssemblyTypeName: EnemyBow, Assembly-CSharp
+        m_MethodName: Spooked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -67000,7 +67053,7 @@ Transform:
   m_GameObject: {fileID: 1557523827}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -68366,7 +68419,7 @@ Transform:
   m_GameObject: {fileID: 1608702736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.83, z: 0}
+  m_LocalPosition: {x: 0, y: -0.974, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -68749,6 +68802,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -68923,6 +68977,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -77693,7 +77748,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1767004431}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.87
+  m_Radius: 0.47
   m_Speed: 6.61
   m_Acceleration: 6.75
   avoidancePriority: 50
@@ -77705,7 +77760,7 @@ NavMeshAgent:
   m_Height: 1.81
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3
 --- !u!114 &1767004434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -77728,6 +77783,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 2147483648
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -79263,7 +79319,7 @@ Transform:
   m_GameObject: {fileID: 1827420653}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.154, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79364,7 +79420,7 @@ Transform:
   m_GameObject: {fileID: 1830317377}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.83, z: 0}
+  m_LocalPosition: {x: 0, y: -0.974, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79902,6 +79958,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -80168,11 +80225,12 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 2147483648
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
-  rangeOfWalkpoint: 0
+  rangeOfWalkpoint: 6.51
   distanceToWalkPoint: {x: 0, y: 0, z: 0}
-  idleDuration: 5
+  idleDuration: 10
   playerInSightRange: 0
   sightRange: 31.4
   playerInAttackRange: 0
@@ -80214,9 +80272,9 @@ NavMeshAgent:
   m_GameObject: {fileID: 1869244765}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.87
-  m_Speed: 6.61
-  m_Acceleration: 6.75
+  m_Radius: 0.47
+  m_Speed: 2
+  m_Acceleration: 2
   avoidancePriority: 50
   m_AngularSpeed: 1
   m_StoppingDistance: 1.25
@@ -80226,7 +80284,7 @@ NavMeshAgent:
   m_Height: 1.81
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3
 --- !u!136 &1869244769
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -80767,6 +80825,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -83231,7 +83290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2017754610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83248,7 +83307,19 @@ MonoBehaviour:
   health: 0
   onDamage:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1869244766}
+        m_TargetAssemblyTypeName: EnemyMelee, Assembly-CSharp
+        m_MethodName: Spooked
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onDeath:
     m_PersistentCalls:
       m_Calls:
@@ -83273,14 +83344,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2017754609}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.5081562, z: -0, w: 0.861265}
+  m_LocalRotation: {x: -0, y: -0.8081197, z: -0, w: 0.58901834}
   m_LocalPosition: {x: 252.41031, y: -255.271, z: -1000.39856}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1869244767}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 61.082, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -107.825, z: 0}
 --- !u!1 &2018778080
 GameObject:
   m_ObjectHideFlags: 0
@@ -83918,8 +83989,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 2041128644}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 1.87
-  m_Speed: 6.61
+  m_Radius: 0.47
+  m_Speed: 2
   m_Acceleration: 6.75
   avoidancePriority: 50
   m_AngularSpeed: 1
@@ -83930,7 +84001,7 @@ NavMeshAgent:
   m_Height: 1.81
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 3
 --- !u!114 &2041128646
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -83953,21 +84024,22 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 2147483648
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
-  rangeOfWalkpoint: 6.53
+  rangeOfWalkpoint: 6.69
   distanceToWalkPoint: {x: 0, y: 0, z: 0}
-  idleDuration: 7
+  idleDuration: 12
   playerInSightRange: 0
   sightRange: 31.4
   playerInAttackRange: 0
-  attackRange: 8.35
+  attackRange: 8.53
   firePoint: {fileID: 761515785}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
   arrowSpeed: 1
   fireCooldown: 2
   nextFireTime: 0
-  fov: 138.2
+  fov: 116.35
   defaultFov: 0
   theWall:
     serializedVersion: 2
@@ -84607,6 +84679,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -84877,6 +84950,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -86141,6 +86215,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -87518,7 +87593,7 @@ Transform:
   m_GameObject: {fileID: 919132148177521761}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.83, z: 0}
+  m_LocalPosition: {x: 0, y: -0.974, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

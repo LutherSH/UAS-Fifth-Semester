@@ -55,6 +55,15 @@ public class IdleStateMelee : TheStateMelee
 
             enemy.SwitchState(new PatrolStateMelee(enemy));
         }
+
+        if (enemy.isSpooked)
+        {
+            enemy.nAgent.isStopped = false;
+            enemy.SwitchState(new PatrolStateMelee(enemy));
+            return;    
+        }
+
+        //if (enemy.isSpooked && !enemy.playerInSightRange) enemy.SwitchState(new PatrolStateMelee(enemy));
     }
 
     ///////////////////////////////////////////////////////////////////////

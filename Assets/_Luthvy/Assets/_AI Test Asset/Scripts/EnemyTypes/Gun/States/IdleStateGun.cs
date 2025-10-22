@@ -55,6 +55,13 @@ public class IdleStateGun : TheStateGun
 
             enemy.SwitchState(new PatrolStateGun(enemy));
         }
+        if (enemy.isSpooked)
+        {
+            enemy.nAgent.isStopped = false;
+            enemy.SwitchState(new PatrolStateGun(enemy));
+            return;    
+        }
+        //if (enemy.isSpooked && !enemy.playerInSightRange) enemy.SwitchState(new PatrolStateGun(enemy));
     }
 
     ///////////////////////////////////////////////////////////////////////

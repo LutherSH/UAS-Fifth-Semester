@@ -71,6 +71,5 @@ public void Update()
     {
         Debug.Log("Exiting Chase");
         //enemy.nAgent.updateRotation = true;
-        enemy.fov = enemy.defaultFov;
     }
 }

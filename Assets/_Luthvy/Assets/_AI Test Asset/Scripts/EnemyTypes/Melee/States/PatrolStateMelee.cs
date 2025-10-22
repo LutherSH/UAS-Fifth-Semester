@@ -33,6 +33,8 @@ public class PatrolStateMelee : TheStateMelee
         {
             enemy.nAgent.SetDestination(enemy.walkPoint);
         }
+
+        enemy.isSpooked = false;
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -79,6 +81,7 @@ public class PatrolStateMelee : TheStateMelee
     public void Exit()
     {
         Debug.Log("Exiting Patrol");
+        enemy.fov = enemy.defaultFov;
     }
 
 ///////////////////////////////////////////////////////////////////////

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class PatrolState : TheStateBow
+public class PatrolStateBow : TheStateBow
 {
 ///////////////////////////////////////////////////////////////////////
 /// PROPERTIES OF STATE
@@ -9,7 +9,7 @@ public class PatrolState : TheStateBow
     private const float arriveTolerance = 0.5f;
     private const int sampleAttempts = 8;
 
-    public PatrolState(EnemyBow enemyAI) // REGISTER STATE
+    public PatrolStateBow(EnemyBow enemyAI) // REGISTER STATE
     {
         enemy = enemyAI;
     }
@@ -33,6 +33,8 @@ public class PatrolState : TheStateBow
         {
             enemy.nAgent.SetDestination(enemy.walkPoint);
         }
+
+        enemy.isSpooked = false;
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -79,6 +81,7 @@ public class PatrolState : TheStateBow
     public void Exit()
     {
         Debug.Log("Exiting Patrol");
+        enemy.fov = enemy.defaultFov;
     }
 
 ///////////////////////////////////////////////////////////////////////

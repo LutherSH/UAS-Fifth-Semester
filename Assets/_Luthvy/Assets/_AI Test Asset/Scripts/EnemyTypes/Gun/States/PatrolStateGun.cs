@@ -33,6 +33,8 @@ public class PatrolStateGun : TheStateGun
         {
             enemy.nAgent.SetDestination(enemy.walkPoint);
         }
+
+        enemy.isSpooked = false;
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -79,6 +81,7 @@ public class PatrolStateGun : TheStateGun
     public void Exit()
     {
         Debug.Log("Exiting Patrol");
+        enemy.fov = enemy.defaultFov;
     }
 
 ///////////////////////////////////////////////////////////////////////

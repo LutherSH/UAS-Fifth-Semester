@@ -11,7 +11,7 @@ public class EnemyMelee : MonoBehaviour
     public NavMeshAgent nAgent;
     public Transform player;
     public LayerMask theGround, thePlayer;
-    
+    public bool isSpooked = false;
 
     ///////////////////////////////////////////////////////////////////////
     ///// Property For Patrol
@@ -114,7 +114,6 @@ public class EnemyMelee : MonoBehaviour
         {
             playerInSightRange = false;          // ❌ Too far away
             playerInAttackRange = false;
-
         }
 
         // STATE UPDATER
@@ -152,6 +151,16 @@ public class EnemyMelee : MonoBehaviour
         hitBoxParent.SetActive(false);
         SwitchState(new DeadStateMelee(this));
         return;
+    }
+
+    public void Spooked()
+    {
+        fov = 359f;
+        
+        if (!playerInSightRange)
+        {
+           isSpooked = true; 
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////

@@ -53,8 +53,17 @@ public class IdleStateBow : TheStateBow
                 enemy.nAgent.isStopped = false;
             }
 
-            enemy.SwitchState(new PatrolState(enemy));
+            enemy.SwitchState(new PatrolStateBow(enemy));
         }
+
+        if (enemy.isSpooked)
+        {
+            enemy.nAgent.isStopped = false;
+            enemy.SwitchState(new PatrolStateBow(enemy));
+            return;    
+        }
+        
+        //if (enemy.isSpooked && enemy.playerInSightRange) idleTimer = 0;
     }
 
     ///////////////////////////////////////////////////////////////////////
