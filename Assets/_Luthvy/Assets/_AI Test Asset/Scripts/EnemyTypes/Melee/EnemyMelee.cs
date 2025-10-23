@@ -40,12 +40,11 @@ public class EnemyMelee : MonoBehaviour
 
     [Header("Attack Settings")]
     public bool playerInAttackRange;
+    public Collider weaponCollider;
     public float attackRange;
-
-    public Transform firePoint;
-    public GameObject arrowPrevab;
-    public float arrowSpeed = 20f;
-    public float fireCooldown = 2f;
+    public int attackDamage = 10;
+    public float attackCooldown = 2f;
+    public float nextAttackTime = 0f;
     [HideInInspector]public float nextFireTime = 0f;
 
     ///////////////////////////////////////////////////////////////////////
@@ -65,6 +64,8 @@ public class EnemyMelee : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+
+        weaponCollider.enabled = false;
     }
 
     void Start()

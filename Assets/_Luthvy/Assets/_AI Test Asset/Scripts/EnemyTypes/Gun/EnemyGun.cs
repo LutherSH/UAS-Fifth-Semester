@@ -6,6 +6,7 @@ using UnityEngine.Rendering;
 public class EnemyGun : MonoBehaviour
 {
     private TheStateGun currentState;
+    public PlayerBehaviour playerBehaviour;
     public Collider hitCollider;
     public GameObject hitBoxParent;
     public NavMeshAgent nAgent;
@@ -40,11 +41,15 @@ public class EnemyGun : MonoBehaviour
 
     [Header("Attack Settings")]
     public bool playerInAttackRange;
-    public float attackRange;
-
     public Transform firePoint;
-    public GameObject arrowPrevab;
-    public float arrowSpeed = 20f;
+    public GameObject bulletTrail;
+    public GameObject muzzleFlash;
+    public GameObject hitEffect;
+    public float bulletInacuracy = 2f;
+    public float maxAccuracy = 1f;
+    public float bulletSpeed = 200f;
+    public float attackRange;
+    public int attackDamage = 40;
     public float fireCooldown = 2f;
     [HideInInspector]public float nextFireTime = 0f;
 

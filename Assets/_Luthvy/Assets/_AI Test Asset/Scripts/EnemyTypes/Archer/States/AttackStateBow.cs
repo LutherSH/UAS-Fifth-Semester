@@ -41,24 +41,22 @@ public class AttackStateBow : TheStateBow
         );
     }
 
-        if (enemy.playerInAttackRange)
+        if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange)
         {
-            Debug.LogError("Attacked Launched");
-            FireAtPlayer();
+            FireBow();
+            enemy.nextFireTime = Time.time + enemy.fireCooldown;
         }
 
-        else
+        if (!enemy.playerInAttackRange)
         {
+            enemy.nAgent.isStopped = false;
             enemy.SwitchState(new ChaseStateBow(enemy));
+            return;
         }
-        
     }
 
-public void FireAtPlayer()
+public void FireBow()
 {
-    if (Time.time < enemy.nextFireTime) return;
-    enemy.nextFireTime = Time.time + enemy.fireCooldown;
-
     // Spawn position (use firePoint if available)
     Vector3 spawnPos = enemy.firePoint != null ? enemy.firePoint.position : enemy.transform.position + enemy.transform.forward * 1.0f;
 
@@ -74,7 +72,7 @@ public void FireAtPlayer()
     Quaternion rot = Quaternion.LookRotation(dir);
 
     // If your bullet model's "nose" isn't on +Z, tweak here:
-    // rot *= Quaternion.Euler(0f, 90f, 0f); // <- tweak if needed
+     rot *= Quaternion.Euler(180f, 0f, 0f); // <- tweak if needed
 
     // Instantiate with the computed rotation
     GameObject bullet = Object.Instantiate(enemy.arrowPrevab, spawnPos, rot);

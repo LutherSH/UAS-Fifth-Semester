@@ -25,77 +25,105 @@ public class AttackStateGun : TheStateGun
     ///////////////////////////////////////////////////////////////////////
     /// STATE UPDATE
 
-    public void Update()
-    {
-    // Face the player
-    Vector3 direction = (enemy.player.position - enemy.transform.position).normalized;
-    direction.y = 0; // keep upright, no tilting
-
-    if (direction.magnitude > 0.01f)
-    {
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        enemy.transform.rotation = Quaternion.Slerp(
-            enemy.transform.rotation,
-            lookRotation,
-            Time.deltaTime * 5f // turn speed
-        );
-    }
-
-        if (enemy.playerInAttackRange)
-        {
-            Debug.LogError("Attacked Launched");
-            FireAtPlayer();
-        }
-
-        else
-        {
-            enemy.SwitchState(new ChaseStateGun(enemy));
-        }
-        
-    }
-
-public void FireAtPlayer()
+public void Update()
 {
-    if (Time.time < enemy.nextFireTime) return;
-    enemy.nextFireTime = Time.time + enemy.fireCooldown;
+    // Rotate to face player
+    Vector3 lookDir = (enemy.player.position - enemy.transform.position).normalized;
+    lookDir.y = 0f;
+    enemy.transform.rotation = Quaternion.LookRotation(lookDir);
 
-    // Spawn position (use firePoint if available)
-    Vector3 spawnPos = enemy.firePoint != null ? enemy.firePoint.position : enemy.transform.position + enemy.transform.forward * 1.0f;
-
-    // Direction to player (use player's current position)
-    Vector3 dir = (enemy.player.position - spawnPos);
-    if (dir.sqrMagnitude < 0.0001f)
+    // Fire if cooldown is ready
+    if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange)
     {
-        dir = enemy.firePoint != null ? enemy.firePoint.forward : enemy.transform.forward;
+        FireGun();
+        enemy.nextFireTime = Time.time + enemy.fireCooldown;
     }
-    dir.Normalize();
 
-    // Rotation that looks along 'dir'
-    Quaternion rot = Quaternion.LookRotation(dir);
-
-    // If your bullet model's "nose" isn't on +Z, tweak here:
-    // rot *= Quaternion.Euler(0f, 90f, 0f); // <- tweak if needed
-
-    // Instantiate with the computed rotation
-    GameObject bullet = Object.Instantiate(enemy.arrowPrevab, spawnPos, rot);
-
-    // Give it velocity if it has a Rigidbody
-    Rigidbody rb = bullet.GetComponent<Rigidbody>();
-    if (rb != null)
+    // Transition back to chase if player moves away
+    if (!enemy.playerInAttackRange)
     {
-        rb.velocity = dir * enemy.arrowSpeed;
+        enemy.nAgent.isStopped = false;
+        enemy.SwitchState(new ChaseStateGun(enemy));
+        return;
+    }
+}
+
+private void FireGun()
+{
+    // Base direction
+    Vector3 shootDir = enemy.firePoint.forward;
+
+    // Add random spread (in degrees)
+    float spread = enemy.bulletInacuracy;
+        shootDir = Quaternion.Euler(
+            Random.Range(-spread, spread),
+            Random.Range(-spread, spread),
+            0
+        ) * shootDir;
+
+    // Now fire the ray
+    if (enemy.bulletInacuracy! >= enemy.maxAccuracy) { enemy.bulletInacuracy = enemy.bulletInacuracy - 0.5f; }
+    
+    Ray ray = new Ray(enemy.firePoint.position, shootDir);
+    RaycastHit hit;
+    Vector3 hitPoint;
+
+    if (Physics.Raycast(ray, out hit, enemy.attackRange, enemy.thePlayer | enemy.theWall))
+    {
+        hitPoint = hit.point;
+        Debug.Log("Gun hit: " + hit.collider.name);
+
+        if (hit.collider.CompareTag("Player"))
+            {
+            //Debug.LogWarning("Hit player " + enemy.attackDamage);
+            enemy.playerBehaviour.PlayerTakeDmg(enemy.attackDamage);
+        }
+
+        if (enemy.muzzleFlash != null)
+            GameObject.Instantiate(enemy.muzzleFlash, enemy.firePoint.position, enemy.firePoint.rotation);
+
+        if (enemy.hitEffect != null)
+            GameObject.Instantiate(enemy.hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
     }
     else
     {
-        // fallback for non-Rigidbody bullets: orient then move in Update()
-        bullet.transform.forward = dir;
+        hitPoint = enemy.firePoint.position + shootDir * enemy.attackRange;
     }
 
-    Debug.Log("Fired bullet at player (dir: " + dir + ")");
+    if (enemy.bulletTrail != null)
+        enemy.StartCoroutine(SpawnTrail(hitPoint));
+
+    Debug.DrawRay(enemy.firePoint.position, shootDir * enemy.attackRange, Color.yellow, 0.3f);
 }
 
 
-///////////////////////////////////////////////////////////////////////
+private IEnumerator SpawnTrail(Vector3 hitPoint)
+{
+    // Create trail object
+    GameObject trail = GameObject.Instantiate(enemy.bulletTrail, enemy.firePoint.position, Quaternion.identity);
+    TrailRenderer tr = trail.GetComponent<TrailRenderer>();
+
+    // Just in case the prefab doesn’t auto-play
+    tr.Clear();
+
+    Vector3 start = enemy.firePoint.position;
+    Vector3 end = hitPoint;
+    float distance = Vector3.Distance(start, end);
+    float speed = enemy.bulletSpeed; // define this in your EnemyGun script (e.g. 200f)
+    float time = 0f;
+
+    while (time < distance / speed)
+    {
+        time += Time.deltaTime;
+        trail.transform.position = Vector3.Lerp(start, end, time * speed / distance);
+        yield return null;
+    }
+
+    trail.transform.position = end;
+    GameObject.Destroy(trail, tr.time); // let it fade naturally
+}
+
+    ///////////////////////////////////////////////////////////////////////
     /// STATE EXIT
 
     public void Exit()
