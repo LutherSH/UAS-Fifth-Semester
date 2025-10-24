@@ -3230,9 +3230,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 838234922}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -6207,9 +6210,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 802121478}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -8000,9 +8006,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 796549685}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -14967,7 +14976,7 @@ GameObject:
   - component: {fileID: 393352936}
   m_Layer: 0
   m_Name: Enemy1 Gun
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16694,9 +16703,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 1151583599}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -17380,7 +17392,8 @@ MonoBehaviour:
   lastEvent: 0
   objectReward: {fileID: 624387597}
   activateNextEvent: {fileID: 855851169}
-  sceneManager: {fileID: 0}
+  sceneManager: {fileID: 619724125}
+  enemiesInArea: []
 --- !u!65 &511992563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36235,6 +36248,128 @@ Transform:
   - {fileID: 434521526}
   m_Father: {fileID: 738783492}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &660759411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660759416}
+  - component: {fileID: 660759415}
+  - component: {fileID: 660759414}
+  - component: {fileID: 660759413}
+  - component: {fileID: 660759412}
+  m_Layer: 9
+  m_Name: 'Temp Bar '
+  m_TagString: Wall
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!208 &660759412
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660759411}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
+--- !u!65 &660759413
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660759411}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &660759414
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660759411}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e4a65e44ce2132941b876ace825a94ab, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &660759415
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660759411}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &660759416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660759411}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.2311765, y: 0.19978681, z: 0.5370754}
+  m_LocalScale: {x: 0.34413117, y: 1.129085, z: 0.06742159}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1667221844}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &661933507
 GameObject:
   m_ObjectHideFlags: 0
@@ -36695,9 +36830,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 514610687}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -40545,6 +40683,7 @@ MonoBehaviour:
   objectReward: {fileID: 1128350273}
   activateNextEvent: {fileID: 242276617}
   sceneManager: {fileID: 0}
+  enemiesInArea: []
 --- !u!65 &855851172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -48776,63 +48915,6 @@ Transform:
   - {fileID: 1647001939}
   m_Father: {fileID: 1379365261}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1230135135
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 254.14
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -240.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -965.11
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 336417233855397853, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1589148320131751349, guid: b742152757a1b044f86a979637d9dc28, type: 3}
-      propertyPath: m_Name
-      value: BulletTrail
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b742152757a1b044f86a979637d9dc28, type: 3}
 --- !u!4 &1230834976 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1615231518916583589, guid: 7fe8129559a797d44926ac7fa25c5e43, type: 3}
@@ -65807,9 +65889,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.325
-  m_Height: 1
+  m_Height: 1.1573792
   m_Direction: 1
-  m_Center: {x: 0, y: -0.22, z: 0}
+  m_Center: {x: 0, y: 0.2961731, z: 0}
 --- !u!114 &1534538865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65977,11 +66059,11 @@ GameObject:
   - component: {fileID: 1544581550}
   m_Layer: 0
   m_Name: Enemy1 Bow
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1544581549
 Transform:
   m_ObjectHideFlags: 0
@@ -68050,9 +68132,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 536615089}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -68225,9 +68310,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 985664771}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -69549,6 +69637,132 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.12563652, y: 0.10986632, z: -0.05591119}
     m_Extent: {x: 0.22203633, y: 0.29582274, z: 0.17334718}
   m_DirtyAABB: 0
+--- !u!1 &1667221839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1667221844}
+  - component: {fileID: 1667221843}
+  - component: {fileID: 1667221842}
+  - component: {fileID: 1667221841}
+  - component: {fileID: 1667221840}
+  m_Layer: 9
+  m_Name: Mini Event
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!114 &1667221840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667221839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a29863104b0cd44ab954bf3cef71f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyTag: Enemy
+  triggerOnce: 1
+  lastEvent: 0
+  objectReward: {fileID: 660759411}
+  activateNextEvent: {fileID: 855851169}
+  sceneManager: {fileID: 619724125}
+  enemiesInArea: []
+--- !u!65 &1667221841
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667221839}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 0.99999994}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &1667221842
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667221839}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: a294649229f3d194c8185fa6752eb836, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &1667221843
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667221839}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1667221844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667221839}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 244.1, y: -253.4, z: -1010.7}
+  m_LocalScale: {x: 87.53418, y: 38.845608, z: 66.48246}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 660759416}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1668743627
 GameObject:
   m_ObjectHideFlags: 0
@@ -76825,8 +77039,8 @@ MonoBehaviour:
   bulletTrail: {fileID: 1589148320131751349, guid: b742152757a1b044f86a979637d9dc28, type: 3}
   muzzleFlash: {fileID: 0}
   hitEffect: {fileID: 0}
-  bulletInacuracy: 4
-  maxAccuracy: 1
+  bulletInaccuracy: 2
+  maxAccuracy: 1.5
   bulletSpeed: 200
   attackRange: 24.13
   attackDamage: 40
@@ -78881,9 +79095,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 534651051}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -79145,7 +79362,7 @@ MonoBehaviour:
   distanceToWalkPoint: {x: 0, y: 0, z: 0}
   idleDuration: 10
   playerInSightRange: 0
-  sightRange: 31.4
+  sightRange: 14.4
   playerInAttackRange: 0
   weaponCollider: {fileID: 1146429394}
   attackRange: 1.92
@@ -79186,11 +79403,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.47
-  m_Speed: 3.03
-  m_Acceleration: 2
+  m_Speed: 4
+  m_Acceleration: 4.85
   avoidancePriority: 50
-  m_AngularSpeed: 2.82
-  m_StoppingDistance: 1.83
+  m_AngularSpeed: 4.18
+  m_StoppingDistance: 1.28
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -79673,9 +79890,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 1414110123}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -82124,11 +82344,11 @@ GameObject:
   - component: {fileID: 2017754610}
   m_Layer: 0
   m_Name: Enemy1 Melee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2017754610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82871,10 +83091,13 @@ MonoBehaviour:
   playerInSightRange: 0
   sightRange: 31.4
   playerInAttackRange: 0
-  attackRange: 8.53
+  attackRange: 15.36
+  bulletInaccuracy: 10.4
+  maxAccuracy: 1
+  arrowSpeed: 30
+  maxArrowSpeed: 50
   firePoint: {fileID: 761515785}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 31.3
   fireCooldown: 1.36
   nextFireTime: 0
   fov: 145.6
@@ -83527,9 +83750,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 1053921371}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -83798,9 +84024,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 257007844}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -85063,9 +85292,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 0
   firePoint: {fileID: 1680674475}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -90623,7 +90855,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -63.998596, y: 72}
+  m_AnchoredPosition: {x: -63.998535, y: 72}
   m_SizeDelta: {x: -63.99939, y: 96}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &4917285729458143156
@@ -94549,5 +94781,5 @@ SceneRoots:
   - {fileID: 1544581549}
   - {fileID: 393352937}
   - {fileID: 2017754611}
-  - {fileID: 1230135135}
   - {fileID: 810596443}
+  - {fileID: 1667221844}

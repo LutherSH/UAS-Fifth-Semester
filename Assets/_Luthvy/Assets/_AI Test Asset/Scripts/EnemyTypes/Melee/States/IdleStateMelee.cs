@@ -18,7 +18,7 @@ public class IdleStateMelee : TheStateMelee
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Idle");
+        //Debug.Log("Entering Idle");
         idleTimer = 0f;
         if (enemy.nAgent != null)
         {
@@ -70,7 +70,7 @@ public class IdleStateMelee : TheStateMelee
     /// STATE EXIT
     public void Exit()
     {
-        Debug.Log("Exiting Idle");
+        //Debug.Log("Exiting Idle");
         if (enemy.nAgent != null)
         {
             enemy.nAgent.isStopped = false;

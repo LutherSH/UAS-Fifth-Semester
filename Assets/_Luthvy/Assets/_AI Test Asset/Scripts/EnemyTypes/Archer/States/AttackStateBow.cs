@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+//using System.Numerics;
 using UnityEngine;
 
 public class AttackStateBow : TheStateBow
@@ -17,7 +18,9 @@ public class AttackStateBow : TheStateBow
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("ATTAAAACCCCKKK");
+        //Debug.Log("ATTAAAACCCCKKK");
+        //enemy.maxArrowSpeed = enemy.arrowSpeed * 1.5f;
+
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
     }
@@ -27,19 +30,20 @@ public class AttackStateBow : TheStateBow
 
     public void Update()
     {
-    // Face the player
-    Vector3 direction = (enemy.player.position - enemy.transform.position).normalized;
-    direction.y = 0; // keep upright, no tilting
+        // Face the player
+        Vector3 faceDir = (enemy.player.position - enemy.transform.position).normalized;
+        faceDir.y = 0; // keep upright, no tilting
 
-    if (direction.magnitude > 0.01f)
-    {
-        Quaternion lookRotation = Quaternion.LookRotation(direction);
-        enemy.transform.rotation = Quaternion.Slerp(
-            enemy.transform.rotation,
-            lookRotation,
-            Time.deltaTime * 5f // turn speed
-        );
-    }
+
+        if (faceDir.magnitude > 0.01f)
+        {
+            Quaternion lookRotation = Quaternion.LookRotation(faceDir);
+            enemy.transform.rotation = Quaternion.Slerp(
+                enemy.transform.rotation,
+                lookRotation,
+                Time.deltaTime * 5f // turn speed
+            );
+        }
 
         if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange)
         {
@@ -54,42 +58,60 @@ public class AttackStateBow : TheStateBow
             return;
         }
     }
-
-public void FireBow()
-{
-    // Spawn position (use firePoint if available)
-    Vector3 spawnPos = enemy.firePoint != null ? enemy.firePoint.position : enemy.transform.position + enemy.transform.forward * 1.0f;
-
-    // Direction to player (use player's current position)
-    Vector3 dir = (enemy.player.position - spawnPos);
-    if (dir.sqrMagnitude < 0.0001f)
+    
+    ///////////////////////////////////////////////////////////////////////
+    /// STATE FIREEEEE
+    public void FireBow()
     {
-        dir = enemy.firePoint != null ? enemy.firePoint.forward : enemy.transform.forward;
-    }
-    dir.Normalize();
+        // Face the player
+        Vector3 shootDir = (enemy.player.position - enemy.transform.position).normalized;
+        shootDir.y = 0; // keep upright, no tilting
+        // Add random spread (in degrees)
+        float spread = enemy.bulletInaccuracy;
+        Vector3 InacureDir = Quaternion.Euler(
+            Random.Range(-spread, spread),
+            Random.Range(-spread, spread),
+            0
+        ) * shootDir;
 
-    // Rotation that looks along 'dir'
-    Quaternion rot = Quaternion.LookRotation(dir);
+        if (enemy.bulletInaccuracy >= enemy.maxAccuracy) { enemy.bulletInaccuracy = enemy.bulletInaccuracy - 0.5f; }
+        if (enemy.arrowSpeed <= enemy.maxArrowSpeed) { enemy.arrowSpeed = enemy.arrowSpeed + 4f; }
 
-    // If your bullet model's "nose" isn't on +Z, tweak here:
-     rot *= Quaternion.Euler(180f, 0f, 0f); // <- tweak if needed
+        //Debug.LogWarning(enemy.maxArrowSpeed + "/" + enemy.arrowSpeed);
+        
+        // Spawn position
+        Vector3 spawnPos = enemy.firePoint != null ? enemy.firePoint.position : enemy.transform.position + enemy.transform.forward * 1.0f;
 
-    // Instantiate with the computed rotation
-    GameObject bullet = Object.Instantiate(enemy.arrowPrevab, spawnPos, rot);
+        // Direction to player
+        Vector3 dir = (enemy.player.position - spawnPos);
+        if (dir.sqrMagnitude < 0.0001f)
+        {
+            dir = enemy.firePoint != null ? enemy.firePoint.forward : enemy.transform.forward;
+        }
+        dir.Normalize();
 
-    // Give it velocity if it has a Rigidbody
-    Rigidbody rb = bullet.GetComponent<Rigidbody>();
-    if (rb != null)
-    {
-        rb.velocity = dir * enemy.arrowSpeed;
-    }
-    else
-    {
-        // fallback for non-Rigidbody bullets: orient then move in Update()
-        bullet.transform.forward = dir;
-    }
+        // Rotation that looks along 'dir'
+        Quaternion rot = Quaternion.LookRotation(dir);
 
-    Debug.Log("Fired bullet at player (dir: " + dir + ")");
+        // Bullet model's "nose" isn't on +Z, tweak here:
+        rot *= Quaternion.Euler(180f, 0f, 0f); // <- tweak prefab
+
+        // Instantiate with the computed rotation
+        GameObject bullet = Object.Instantiate(enemy.arrowPrevab, spawnPos, rot);
+
+        // Give it velocity if it has a Rigidbody
+        Rigidbody rb = bullet.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.velocity = InacureDir * enemy.arrowSpeed;
+        }
+        else
+        {
+            // fallback for non-Rigidbody bullets: orient then move in Update()
+            bullet.transform.forward = dir;
+        }
+
+    //Debug.Log("Fired bullet at player (dir: " + dir + ")");
 }
 
 
@@ -98,6 +120,6 @@ public void FireBow()
 
     public void Exit()
     {
-        Debug.Log("Exiting Attack");
+        //Debug.Log("Exiting Attack");
     }
 }

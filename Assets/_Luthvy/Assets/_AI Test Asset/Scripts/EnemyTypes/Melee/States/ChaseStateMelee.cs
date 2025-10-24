@@ -17,7 +17,7 @@ public class ChaseStateMelee : TheStateMelee
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Chase");
+        //Debug.Log("Entering Chase");
         if (enemy.nAgent != null)
         {
             enemy.nAgent.isStopped = false;
@@ -69,7 +69,7 @@ public void Update()
     /// STATE EXIT
     public void Exit()
     {
-        Debug.Log("Exiting Chase");
+        //Debug.Log("Exiting Chase");
         //enemy.nAgent.updateRotation = true;  
     }
 }

@@ -63,6 +63,6 @@ public class PlayerBehaviour : MonoBehaviour
         isDead = true;
         sceneManager.ShowGameOver();
         Debug.Log("Player Died");
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 }

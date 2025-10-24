@@ -17,7 +17,7 @@ public class AttackStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("ATTAAAACCCCKKK");
+        //Debug.Log("ATTAAAACCCCKKK");
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
     }
@@ -54,7 +54,7 @@ private void FireGun()
     Vector3 shootDir = enemy.firePoint.forward;
 
     // Add random spread (in degrees)
-    float spread = enemy.bulletInacuracy;
+    float spread = enemy.bulletInaccuracy;
         shootDir = Quaternion.Euler(
             Random.Range(-spread, spread),
             Random.Range(-spread, spread),
@@ -62,7 +62,7 @@ private void FireGun()
         ) * shootDir;
 
     // Now fire the ray
-    if (enemy.bulletInacuracy! >= enemy.maxAccuracy) { enemy.bulletInacuracy = enemy.bulletInacuracy - 0.5f; }
+    if (enemy.bulletInaccuracy >= enemy.maxAccuracy) { enemy.bulletInaccuracy = enemy.bulletInaccuracy - 0.5f; }
     
     Ray ray = new Ray(enemy.firePoint.position, shootDir);
     RaycastHit hit;
@@ -128,6 +128,6 @@ private IEnumerator SpawnTrail(Vector3 hitPoint)
 
     public void Exit()
     {
-        Debug.Log("Exiting Attack");
+        //Debug.Log("Exiting Attack");
     }
 }

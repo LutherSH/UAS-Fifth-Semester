@@ -19,6 +19,7 @@ public class DeadStateMelee : TheStateMelee
     {
         Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
+        enemy.Despawn();
     }
 
     ///////////////////////////////////////////////////////////////////////

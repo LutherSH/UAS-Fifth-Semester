@@ -157,13 +157,17 @@ public class EnemyMelee : MonoBehaviour
     public void Spooked()
     {
         fov = 359f;
-        
+
         if (!playerInSightRange)
         {
-           isSpooked = true; 
+            isSpooked = true;
         }
     }
 
+    public void Despawn()
+    {
+        Destroy(gameObject);
+    }
     ///////////////////////////////////////////////////////////////////////
     /// DRAW GIZMIOZ
     void OnDrawGizmosSelected()

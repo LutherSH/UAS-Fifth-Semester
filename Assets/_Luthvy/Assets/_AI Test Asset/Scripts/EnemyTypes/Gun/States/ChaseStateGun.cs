@@ -17,7 +17,7 @@ public class ChaseStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Chase");
+        //Debug.Log("Entering Chase");
         if (enemy.nAgent != null)
         {
             enemy.nAgent.isStopped = false;

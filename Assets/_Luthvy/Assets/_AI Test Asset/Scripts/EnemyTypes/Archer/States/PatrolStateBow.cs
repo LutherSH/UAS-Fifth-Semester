@@ -18,7 +18,7 @@ public class PatrolStateBow : TheStateBow
 /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Patrol");
+        //Debug.Log("Entering Patrol");
 
         if (enemy.nAgent == null) enemy.nAgent = enemy.GetComponent<NavMeshAgent>();
 
@@ -75,17 +75,8 @@ public class PatrolStateBow : TheStateBow
         }
 
     }
-    
-///////////////////////////////////////////////////////////////////////
-/// STATE EXIT
-    public void Exit()
-    {
-        Debug.Log("Exiting Patrol");
-        enemy.fov = enemy.defaultFov;
-    }
-
-///////////////////////////////////////////////////////////////////////
-/// FIND AND SET WALKPOINT
+    ///////////////////////////////////////////////////////////////////////
+    /// FIND AND SET WALKPOINT
     private void TryFindAndSetWalkPoint()
     {
         if (enemy == null) return;
@@ -118,5 +109,13 @@ public class PatrolStateBow : TheStateBow
         }
 
         enemy.setAWalkPoint = false;
+    }
+    
+    ///////////////////////////////////////////////////////////////////////
+    /// STATE EXIT
+    public void Exit()
+    {
+        //Debug.Log("Exiting Patrol");
+        enemy.fov = enemy.defaultFov;
     }
 }

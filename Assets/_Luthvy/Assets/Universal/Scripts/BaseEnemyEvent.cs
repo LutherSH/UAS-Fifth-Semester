@@ -20,7 +20,7 @@ public class BaseEnemyEvent : MonoBehaviour
     public SceneManagerTG sceneManager;
 /////////////////////////////////////////////////////////////////////
     /// 
-    private List<GameObject> enemiesInArea = new List<GameObject>();
+    public List<GameObject> enemiesInArea = new List<GameObject>();
     private bool triggered = false;
 
 /////////////////////////////////////////////////////////////////////
@@ -66,6 +66,8 @@ public class BaseEnemyEvent : MonoBehaviour
         {
             sceneManager.TemporaryGameWin();
         }
+
+        //Debug.LogWarning(enemiesInArea);
     }
     /////////////////////////////////////////////////////////////////////
     /// 

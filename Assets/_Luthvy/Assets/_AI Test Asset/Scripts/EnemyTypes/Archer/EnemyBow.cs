@@ -41,9 +41,12 @@ public class EnemyBow : MonoBehaviour
     [Header("Attack Settings")]
     public bool playerInAttackRange;
     public float attackRange;
+    public float bulletInaccuracy = 2;
+    public float maxAccuracy = 1;
+    public float arrowSpeed = 20f;
+    public float maxArrowSpeed = 30f;
     public Transform firePoint;
     public GameObject arrowPrevab;
-    public float arrowSpeed = 20f;
     //public int attackDamage = 30;
     public float fireCooldown = 2f;
     [HideInInspector]public float nextFireTime = 0f;
@@ -156,11 +159,16 @@ public class EnemyBow : MonoBehaviour
     public void Spooked()
     {
         fov = 359f;
-        
+
         if (!playerInSightRange)
         {
-           isSpooked = true; 
+            isSpooked = true;
         }
+    }
+    
+    public void Despawn()
+    {
+        Destroy(gameObject);
     }
 
     ///////////////////////////////////////////////////////////////////////

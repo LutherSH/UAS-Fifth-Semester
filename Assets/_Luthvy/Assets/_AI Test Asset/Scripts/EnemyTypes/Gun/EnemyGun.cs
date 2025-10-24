@@ -45,7 +45,7 @@ public class EnemyGun : MonoBehaviour
     public GameObject bulletTrail;
     public GameObject muzzleFlash;
     public GameObject hitEffect;
-    public float bulletInacuracy = 2f;
+    public float bulletInaccuracy = 2f;
     public float maxAccuracy = 1f;
     public float bulletSpeed = 200f;
     public float attackRange;
@@ -160,11 +160,16 @@ public class EnemyGun : MonoBehaviour
     public void Spooked()
     {
         fov = 359f;
-        
+
         if (!playerInSightRange)
         {
-           isSpooked = true; 
+            isSpooked = true;
         }
+    }
+
+    public void Despawn()
+    {
+        Destroy(gameObject);
     }
     ///////////////////////////////////////////////////////////////////////
     /// DRAW GIZMIOZ

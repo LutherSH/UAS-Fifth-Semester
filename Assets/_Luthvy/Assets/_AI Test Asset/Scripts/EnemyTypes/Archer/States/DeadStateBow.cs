@@ -1,3 +1,4 @@
+using UnityEditor;
 using UnityEngine;
 
 public class DeadStateBow : TheStateBow
@@ -19,6 +20,7 @@ public class DeadStateBow : TheStateBow
     {
         Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
+        enemy.Despawn();
     }
 
     ///////////////////////////////////////////////////////////////////////
