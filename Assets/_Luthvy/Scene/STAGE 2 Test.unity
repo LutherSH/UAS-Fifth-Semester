@@ -893,6 +893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 105330146}
   player: {fileID: 0}
   theGround:
@@ -901,6 +903,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -910,9 +913,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 838234922}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -1569,6 +1575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 240890393}
   player: {fileID: 0}
   theGround:
@@ -1577,6 +1585,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -1586,9 +1595,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 802121478}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -2176,6 +2188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 306601593}
   player: {fileID: 0}
   theGround:
@@ -2184,6 +2198,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -2193,9 +2208,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 796549685}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -2537,6 +2555,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330977134}
   m_CullTransparentMesh: 1
+--- !u!1 &335294450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 335294453}
+  - component: {fileID: 335294452}
+  - component: {fileID: 335294451}
+  m_Layer: 0
+  m_Name: Terrain_(1018.87, -355.42, 26.03)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!154 &335294451
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335294450}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: c2596f21eb398fb4894e768b8ed54373, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &335294452
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335294450}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: c2596f21eb398fb4894e768b8ed54373, type: 2}
+  m_TreeDistance: 328
+  m_TreeBillboardDistance: 77
+  m_TreeCrossFadeLength: 200
+  m_TreeMaximumFullLODCount: 111
+  m_DetailObjectDistance: 0
+  m_DetailObjectDensity: 0
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 0
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.1024
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!4 &335294453
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 335294450}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1018.8665, y: -355.4196, z: 26.028076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &347935764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2962,6 +3073,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 489219409}
   player: {fileID: 0}
   theGround:
@@ -2970,6 +3083,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -2979,9 +3093,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 1151583599}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -3149,6 +3266,7 @@ MonoBehaviour:
   objectReward: {fileID: 624387597}
   activateNextEvent: {fileID: 855851169}
   sceneManager: {fileID: 1465365140}
+  enemiesInArea: []
 --- !u!65 &511992563
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4712,6 +4830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 702240009}
   player: {fileID: 0}
   theGround:
@@ -4720,6 +4840,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -4729,9 +4850,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 514610687}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -5626,6 +5750,7 @@ MonoBehaviour:
   objectReward: {fileID: 1128350273}
   activateNextEvent: {fileID: 242276617}
   sceneManager: {fileID: 1465365140}
+  enemiesInArea: []
 --- !u!65 &855851172
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7365,6 +7490,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173014698}
   m_CullTransparentMesh: 1
+--- !u!1 &1186397791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1186397794}
+  - component: {fileID: 1186397793}
+  - component: {fileID: 1186397792}
+  m_Layer: 0
+  m_Name: Terrain_(518.87, -355.42, 26.03)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!154 &1186397792
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186397791}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: 2d6b1d3e613a1134a9193d3620e1284f, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1186397793
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186397791}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 2d6b1d3e613a1134a9193d3620e1284f, type: 2}
+  m_TreeDistance: 328
+  m_TreeBillboardDistance: 77
+  m_TreeCrossFadeLength: 200
+  m_TreeMaximumFullLODCount: 111
+  m_DetailObjectDistance: 0
+  m_DetailObjectDensity: 0
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 0
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.1024
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!4 &1186397794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186397791}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 518.8665, y: -355.4196, z: 26.028076}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1188234408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10104,6 +10322,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 1611807966}
   player: {fileID: 0}
   theGround:
@@ -10112,6 +10332,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -10121,9 +10342,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 536615089}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -10276,6 +10500,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 1612225924}
   player: {fileID: 0}
   theGround:
@@ -10284,6 +10510,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -10293,9 +10520,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 985664771}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -11651,6 +11881,99 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791456847}
   m_CullTransparentMesh: 1
+--- !u!1 &1792393873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1792393876}
+  - component: {fileID: 1792393875}
+  - component: {fileID: 1792393874}
+  m_Layer: 0
+  m_Name: Terrain_(1018.87, -355.42, -473.97)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!154 &1792393874
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792393873}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: 67bb5410fb3dc5c4b947c39682c2fe5a, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1792393875
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792393873}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 67bb5410fb3dc5c4b947c39682c2fe5a, type: 2}
+  m_TreeDistance: 328
+  m_TreeBillboardDistance: 77
+  m_TreeCrossFadeLength: 200
+  m_TreeMaximumFullLODCount: 111
+  m_DetailObjectDistance: 0
+  m_DetailObjectDensity: 0
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 0
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.1024
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!4 &1792393876
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1792393873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1018.8665, y: -355.4196, z: -473.97192}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792857472
 GameObject:
   m_ObjectHideFlags: 0
@@ -12020,6 +12343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 1859859313}
   player: {fileID: 0}
   theGround:
@@ -12028,6 +12353,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -12037,9 +12363,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 534651051}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -12392,6 +12721,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 1889132602}
   player: {fileID: 0}
   theGround:
@@ -12400,6 +12731,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -12409,9 +12741,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 1414110123}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -12809,6 +13144,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3520330995074516277, guid: a1d9b062ffe5639469515296fba6ca50, type: 3}
   m_PrefabInstance: {fileID: 5952416772977666061}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1960282936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1960282939}
+  - component: {fileID: 1960282938}
+  - component: {fileID: 1960282937}
+  m_Layer: 0
+  m_Name: Terrain_(1018.87, -355.42, -973.97)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 2147483647
+  m_IsActive: 1
+--- !u!154 &1960282937
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960282936}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_TerrainData: {fileID: 15600000, guid: bfb262b2021b8c64c81b19cdd1b9df13, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!218 &1960282938
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960282936}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: bfb262b2021b8c64c81b19cdd1b9df13, type: 2}
+  m_TreeDistance: 328
+  m_TreeBillboardDistance: 77
+  m_TreeCrossFadeLength: 200
+  m_TreeMaximumFullLODCount: 111
+  m_DetailObjectDistance: 0
+  m_DetailObjectDensity: 0
+  m_HeightmapPixelError: 5
+  m_SplatMapDistance: 1000
+  m_HeightmapMinimumLODSimplification: 0
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 2
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_StaticShadowCaster: 0
+  m_IgnoreQualitySettings: 0
+  m_ReflectionProbeUsage: 1
+  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_BakeLightProbesForTrees: 1
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 0
+  m_ReceiveGI: 1
+  m_ScaleInLightmap: 0.1024
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 1
+  m_EnableHeightmapRayTracing: 1
+  m_EnableTreesAndDetailsRayTracing: 0
+  m_TreeMotionVectorModeOverride: 3
+--- !u!4 &1960282939
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1960282936}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1018.8665, y: -355.4196, z: -973.9719}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1966364728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13495,6 +13923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 2053973411}
   player: {fileID: 0}
   theGround:
@@ -13503,6 +13933,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -13512,9 +13943,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 1053921371}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -13667,6 +14101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 2057348645}
   player: {fileID: 0}
   theGround:
@@ -13675,6 +14111,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 128
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 4.9
@@ -13684,9 +14121,12 @@ MonoBehaviour:
   sightRange: 44.6
   playerInAttackRange: 0
   attackRange: 12.68
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 257007844}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -14261,6 +14701,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f725e8cf983a37e43a0f091d027d7942, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitCollider: {fileID: 0}
+  hitBoxParent: {fileID: 0}
   nAgent: {fileID: 2102927927}
   player: {fileID: 0}
   theGround:
@@ -14269,6 +14711,7 @@ MonoBehaviour:
   thePlayer:
     serializedVersion: 2
     m_Bits: 0
+  isSpooked: 0
   walkPoint: {x: 0, y: 0, z: 0}
   setAWalkPoint: 0
   rangeOfWalkpoint: 6.53
@@ -14278,9 +14721,12 @@ MonoBehaviour:
   sightRange: 31.4
   playerInAttackRange: 0
   attackRange: 8.35
+  bulletInaccuracy: 2
+  maxAccuracy: 1
+  arrowSpeed: 20
+  maxArrowSpeed: 30
   firePoint: {fileID: 1680674475}
   arrowPrevab: {fileID: 6915966359813096699, guid: 84d90ca351e2af04da7c90935bf8b537, type: 3}
-  arrowSpeed: 20
   fireCooldown: 2
   nextFireTime: 0
   fov: 138.2
@@ -14849,3 +15295,7 @@ SceneRoots:
   - {fileID: 1349832508}
   - {fileID: 705305202}
   - {fileID: 678835721}
+  - {fileID: 1186397794}
+  - {fileID: 335294453}
+  - {fileID: 1792393876}
+  - {fileID: 1960282939}
