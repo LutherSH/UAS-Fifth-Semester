@@ -34,7 +34,7 @@ MonoBehaviour:
   burstTime: 0.125
   ammoClip: 12
   startingClips: 3
-  firerate: 0.25
+  firerate: 0.23
   fireDelay: 0
   fireCooldownSpeed: 1
   canFireWhileDelayed: 0
@@ -44,10 +44,10 @@ MonoBehaviour:
   aimFOV: 60
   aimDownSpeed: 8
   ironSightAim:
-    position: {x: 0, y: 0, z: 0}
-    eulerAngles: {x: 0, y: 0, z: 0}
+    position: {x: -0.175, y: 0.121, z: -0.195}
+    eulerAngles: {x: -1, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
-  bulletDamage: 10
+  bulletDamage: 35
   headshotMult: 1.25
   bulletRange: 100
   bulletSpread: 0.1
