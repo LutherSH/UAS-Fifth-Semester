@@ -42,7 +42,7 @@ MonoBehaviour:
   canFireWhileActing: 1
   fireWhenPressedUp: 0
   aimFOV: 60
-  aimDownSpeed: 8
+  aimDownSpeed: 14
   ironSightAim:
     position: {x: -0.175, y: 0.121, z: -0.195}
     eulerAngles: {x: -1, y: 0, z: 0}
@@ -52,13 +52,31 @@ MonoBehaviour:
   bulletRange: 100
   bulletSpread: 0.1
   aimSpreadMultiplier: 0.2
-  aimDownMultiplier: 0.5
+  aimDownMultiplier: 0.6
   cyclesInClip: 1
   recoil:
     xRecoil:
       graph:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.46148774
+          value: -0.0012634136
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.53851223
+          value: -0.0012634136
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -66,7 +84,16 @@ MonoBehaviour:
     yRecoil:
       graph:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0.195
+          inSlope: 94.999985
+          outSlope: 94.999985
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -74,12 +101,30 @@ MonoBehaviour:
     zRecoil:
       graph:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: -0.48204753
+          value: 0.104566514
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.51795244
+          value: 0.104566514
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 34
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
       multiplier: 1
-    randomizeRecoil: 0
+    randomizeRecoil: 0.1
   animationController: {fileID: 9100000, guid: 764a8026b591b0546a87998c247c6675, type: 2}
   gunMotions:
     idle: P_idle
@@ -89,7 +134,7 @@ MonoBehaviour:
     putAway: P_putAway
     takeOut: P_takeOut
   gunIcon: {fileID: 2258435179232560843, guid: 36987911bc800964ebe5a82bae41c9a9, type: 3}
-  ammoOffsetX: 180
+  ammoOffsetX: 96
   shootClips:
   - {fileID: 8300000, guid: f110a3c80633d804982a8eb647405f0e, type: 3}
   reloadSFX: {fileID: 8300000, guid: ce43fa76bb328a043827bcd5c16c1bb9, type: 3}

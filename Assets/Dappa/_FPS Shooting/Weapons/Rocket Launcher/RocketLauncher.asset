@@ -33,8 +33,8 @@ MonoBehaviour:
   burstShot: 3
   burstTime: 0.125
   ammoClip: 1
-  startingClips: 6
-  firerate: 0.416666
+  startingClips: 7
+  firerate: 0.3
   fireDelay: 0.25
   fireCooldownSpeed: 2
   canFireWhileDelayed: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
   canFireWhileActing: 1
   fireWhenPressedUp: 0
   aimFOV: 45
-  aimDownSpeed: 4
+  aimDownSpeed: 8
   ironSightAim:
     position: {x: -0.175, y: 0.115, z: -0.275}
     eulerAngles: {x: 0, y: 0, z: 0}
@@ -50,9 +50,9 @@ MonoBehaviour:
   bulletDamage: 80
   headshotMult: 1
   bulletRange: 100
-  bulletSpread: 0.1
+  bulletSpread: 0.05
   aimSpreadMultiplier: 0
-  aimDownMultiplier: 0.5
+  aimDownMultiplier: 0
   cyclesInClip: 1
   recoil:
     xRecoil:
@@ -107,7 +107,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      multiplier: 1.5
+      multiplier: 1
     yRecoil:
       graph:
         serializedVersion: 2
@@ -195,7 +195,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      multiplier: 1.5
+      multiplier: 1
     randomizeRecoil: 0
   animationController: {fileID: 9100000, guid: a813e50e315d882478f7806fdf38a0de, type: 2}
   gunMotions:

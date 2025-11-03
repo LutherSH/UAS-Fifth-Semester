@@ -49284,7 +49284,7 @@ GameObject:
   - component: {fileID: 3186899000128639652}
   - component: {fileID: 5102348189645103306}
   m_Layer: 31
-  m_Name: ShooterPlayer
+  m_Name: ShooterPlayer1
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

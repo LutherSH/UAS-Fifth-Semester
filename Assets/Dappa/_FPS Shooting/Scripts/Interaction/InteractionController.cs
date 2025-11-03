@@ -44,8 +44,9 @@ public class InteractionController : MonoBehaviour
                     if (input.interact)
                         interactWith.Interact();
                 }
-                if (ui) ui.InteractableSelected(interactWith != null);
             }
         }
+        
+        if (ui) ui.InteractableSelected(interactWith != null);
     }
 }
