@@ -655,7 +655,7 @@ public class GunController : MonoBehaviour
     }
 
 #if UNITY_EDITOR
-    static readonly string playerPrefabPath = "Assets/_FPS Shooting/ShooterPlayer.prefab";
+    static readonly string playerPrefabPath = "Assets/Dappa/_FPS Shooting/ShooterPlayer.prefab";
     //Return the GunHandler if we already have the gun, otherwise return null
     [ExecuteInEditMode]
     public void AddGun(GunObject addGun)

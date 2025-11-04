@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - WeaponHolder
-  - Wall
-  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -15,18 +13,17 @@ TagManager:
   - Water
   - UI
   - 
-  - Ladder
+  - 
   - Vault
   - Wallrun
   - Ledge
-  - TopWater
+  - Ladder
+  - Top Water
   - UnderWater
   - Overlay
   - OverlayGun
   - DamageZone
   - Interactable
-  - Building
-  - EventBox
   - 
   - 
   - 
@@ -38,7 +35,8 @@ TagManager:
   - 
   - 
   - 
-  - Terrains
+  - 
+  - 
   - Player
   m_SortingLayers:
   - name: Default
