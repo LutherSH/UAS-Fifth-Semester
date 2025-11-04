@@ -90,7 +90,7 @@ public class PatrolStateMelee : TheStateMelee
     {
         if (enemy == null) return;
 
-        float range = Mathf.Max(0.1f, enemy.rangeOfWalkpoint);
+        float range = Mathf.Max(10f, enemy.rangeOfWalkpoint);
 
         for (int i = 0; i < sampleAttempts; i++)
         {

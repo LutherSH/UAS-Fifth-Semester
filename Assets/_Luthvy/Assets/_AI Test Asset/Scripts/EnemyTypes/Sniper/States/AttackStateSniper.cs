@@ -79,10 +79,10 @@ private void FireGun()
         if (enemy.hitEffect != null)
             GameObject.Instantiate(enemy.hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
     }
-    else
-    {
-        hitPoint = enemy.firePoint.position + shootDir * enemy.attackRange;
-    }
+    // else
+    // {
+    //     //hitPoint = enemy.firePoint.position + shootDir * enemy.attackRange;
+    // }
 
    
 

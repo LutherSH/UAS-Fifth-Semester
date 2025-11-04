@@ -90,8 +90,9 @@ public class PatrolStateGun : TheStateGun
     private void TryFindAndSetWalkPoint()
     {
         if (enemy == null) return;
+        float scaleFactor = enemy.transform.localScale.x;
 
-        float range = Mathf.Max(0.1f, enemy.rangeOfWalkpoint);
+        float range = Mathf.Max(10f, enemy.rangeOfWalkpoint * scaleFactor);
 
         for (int i = 0; i < sampleAttempts; i++)
         {

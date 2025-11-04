@@ -29,7 +29,7 @@ public void Update()
 {
     // Rotate to face player
     Vector3 lookDir = (enemy.player.position - enemy.transform.position).normalized;
-    //lookDir.y = 0f;
+    lookDir.y = 0f;
     enemy.transform.rotation = Quaternion.LookRotation(lookDir);
 
     // Fire if cooldown is ready
