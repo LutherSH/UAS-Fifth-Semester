@@ -18,7 +18,7 @@ public class PatrolStateGun : TheStateGun
 /// STATE ENTER
     public void Enter()
     {
-        //Debug.Log("Entering Patrol");
+        Debug.Log("Entering Patrol");
 
         if (enemy.nAgent == null) enemy.nAgent = enemy.GetComponent<NavMeshAgent>();
 
@@ -46,6 +46,7 @@ public class PatrolStateGun : TheStateGun
         if (!enemy.setAWalkPoint)
         {
             TryFindAndSetWalkPoint();
+            Debug.LogError("this");
             return;
         }
 

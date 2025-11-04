@@ -149,6 +149,13 @@ public class EnemySniper : MonoBehaviour
         currentState.Enter();
     }
 
+    // public void ForceAttack()
+    // {
+    //     //SwitchState(new AttackStateSniper(this));
+    //     reactionDelay = 0.5f;
+    //     return;
+    // }
+
     public void PermaDeath()
     {
         currentState.Exit();
@@ -160,11 +167,14 @@ public class EnemySniper : MonoBehaviour
     public void Spooked()
     {
         fov = 359f;
+        reactionDelay = 0.2f;
 
         if (!playerInSightRange)
         {
             isSpooked = true;
         }
+
+        SwitchState(new IdleStateSniper(this));
     }
 
     public void Despawn()

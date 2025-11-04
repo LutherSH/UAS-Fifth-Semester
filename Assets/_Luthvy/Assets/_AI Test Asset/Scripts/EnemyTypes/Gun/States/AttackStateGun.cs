@@ -17,7 +17,7 @@ public class AttackStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        //Debug.Log("ATTAAAACCCCKKK");
+        Debug.Log("ATTAAAACCCCKKK");
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
     }

@@ -62,8 +62,10 @@ private void FireGun()
 
     if (Physics.Raycast(ray, out hit, enemy.attackRange, enemy.thePlayer | enemy.theWall))
     {
-        hitPoint = hit.point;
-        Debug.Log("Gun hit: " + hit.collider.name);
+            hitPoint = hit.point;
+        
+        if (enemy.bulletTrail != null)enemy.StartCoroutine(SpawnTrail(hitPoint));
+        //Debug.Log("Gun hit: " + hit.collider.name);
 
         if (hit.collider.CompareTag("Player"))
             {
@@ -82,8 +84,7 @@ private void FireGun()
         hitPoint = enemy.firePoint.position + shootDir * enemy.attackRange;
     }
 
-    if (enemy.bulletTrail != null)
-        enemy.StartCoroutine(SpawnTrail(hitPoint));
+   
 
     Debug.DrawRay(enemy.firePoint.position, shootDir * enemy.attackRange, Color.yellow, 0.3f);
 }
@@ -101,7 +102,7 @@ private IEnumerator SpawnTrail(Vector3 hitPoint)
     Vector3 start = enemy.firePoint.position;
     Vector3 end = hitPoint;
     float distance = Vector3.Distance(start, end);
-    float speed = enemy.bulletSpeed; // define this in your EnemyGun script (e.g. 200f)
+    float speed = enemy.bulletSpeed; 
     float time = 0f;
 
     while (time < distance / speed)

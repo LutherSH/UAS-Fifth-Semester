@@ -8,6 +8,7 @@ public class SceneManagerTG : MonoBehaviour
     public string sceneName;
     public GameObject gameOverScreen;
     public GameObject winScreen;
+    private float delayGameOver = 0.03f;
 
     //////////////////////////////////////////////////////////
 
@@ -53,8 +54,7 @@ public class SceneManagerTG : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
-        gameOverScreen.SetActive(true);
-        Time.timeScale = 0f;
+        StartCoroutine(DelayDeath());
     }
 
     public void RetryGame()
@@ -68,5 +68,10 @@ public class SceneManagerTG : MonoBehaviour
         Debug.LogWarning("QUIT GAME");
     }
 
-
+    IEnumerator DelayDeath()
+    {
+        yield return new WaitForSeconds(delayGameOver);
+        gameOverScreen.SetActive(true);
+        Time.timeScale = 0f;
+    }
 }
