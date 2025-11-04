@@ -50,9 +50,9 @@ MonoBehaviour:
   bulletDamage: 35
   headshotMult: 1.25
   bulletRange: 100
-  bulletSpread: 0.1
-  aimSpreadMultiplier: 0.2
-  aimDownMultiplier: 0.6
+  bulletSpread: 0.04
+  aimSpreadMultiplier: 0
+  aimDownMultiplier: 0.65
   cyclesInClip: 1
   recoil:
     xRecoil:
@@ -87,7 +87,7 @@ MonoBehaviour:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.195
+          value: 0.12
           inSlope: 94.999985
           outSlope: 94.999985
           tangentMode: 34
@@ -97,7 +97,7 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-      multiplier: 1
+      multiplier: 0.5
     zRecoil:
       graph:
         serializedVersion: 2
