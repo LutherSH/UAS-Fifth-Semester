@@ -3911,7 +3911,7 @@ Transform:
   m_GameObject: {fileID: 497580415}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 214, y: -257, z: -1236}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -16305,7 +16305,7 @@ Transform:
   m_GameObject: {fileID: 3985881394650515725}
   serializedVersion: 2
   m_LocalRotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: 246.14, y: -253.47, z: -1077.26}
+  m_LocalPosition: {x: 256.5, y: -255, z: -1072.8}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -62755,7 +62755,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -63.99994, y: 72}
+  m_AnchoredPosition: {x: -63.999023, y: 72}
   m_SizeDelta: {x: -63.99939, y: 96}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!222 &4917285728786871378
@@ -63297,10 +63297,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4917285727803237291}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0.5}
-  m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -68}
-  m_SizeDelta: {x: 848, y: 64}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -71}
+  m_SizeDelta: {x: 848, y: -1111}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &4917285729753488343
 GameObject:
@@ -74254,7 +74254,7 @@ Transform:
   m_GameObject: {fileID: 8633167997316959659}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 40.17, y: 5.53, z: 157.3}
+  m_LocalPosition: {x: 257.1, y: -254.5, z: -1079}
   m_LocalScale: {x: 3.5, y: 3.5, z: 3.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79547,7 +79547,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 2048146986845363055}
-  playerBehaviour: {fileID: 8633167997316959660}
+  playerBehaviour: {fileID: 0}
 --- !u!4 &7075233761896972825
 Transform:
   m_ObjectHideFlags: 0
@@ -84352,9 +84352,9 @@ MonoBehaviour:
   - {x: -3.2300055, y: 0.9549999, z: -13.514522}
   m_newTransformIndex: 0
   walkSpeed: 25
-  runSpeed: 40
+  runSpeed: 45
   crouchSpeed: 10
-  jumpSpeed: 10
+  jumpSpeed: 15
   gravity: 20
   antiBumpFactor: 0.75
   moveDirection: {x: 0, y: -3.4, z: 0}
@@ -87227,8 +87227,8 @@ GameObject:
   - component: {fileID: 3118980948715869745}
   - component: {fileID: 1664680154715040070}
   - component: {fileID: 8051843194952589363}
-  - component: {fileID: 8633167997316959660}
   - component: {fileID: 912704891451389275}
+  - component: {fileID: 8633167997316959660}
   m_Layer: 31
   m_Name: PlayerTrue
   m_TagString: Player
