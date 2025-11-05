@@ -1206,6 +1206,7 @@ MonoBehaviour:
   playerInAttackRange: 0
   firePoint: {fileID: 303397458362519952}
   bulletTrail: {fileID: 1589148320131751349, guid: 9fd236e684f0411479458a4f297efd28, type: 3}
+  sightLazer: {fileID: 0}
   muzzleFlash: {fileID: 0}
   hitEffect: {fileID: 0}
   bulletInaccuracy: 0

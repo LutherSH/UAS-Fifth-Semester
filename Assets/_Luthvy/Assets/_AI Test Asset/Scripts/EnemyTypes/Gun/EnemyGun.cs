@@ -8,7 +8,7 @@ public class EnemyGun : MonoBehaviour
     private TheStateGun currentState;
     public PlayerBehaviour playerBehaviour;
     public Collider hitCollider;
-    public Transform bodyVisual;
+    //public Transform bodyVisual;
     public GameObject hitBoxParent;
     public NavMeshAgent nAgent;
     public Transform player;

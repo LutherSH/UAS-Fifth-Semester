@@ -43,6 +43,7 @@ public class EnemySniper : MonoBehaviour
     public bool playerInAttackRange;
     public Transform firePoint;
     public GameObject bulletTrail;
+    public GameObject sightLazer;
     public GameObject muzzleFlash;
     public GameObject hitEffect;
     public float bulletInaccuracy = 2f;
