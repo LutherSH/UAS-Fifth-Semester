@@ -12,6 +12,7 @@ public class BaseEnemyEvent : MonoBehaviour
     public bool triggerOnce = true;
     public bool lastEvent;
     private GameObject theEventGameobject;
+    public GameObject NoGoingBackBarrier;
 
 /////////////////////////////////////////////////////////////////////
 /// OBJECTIVE INFO (For ObjectiveManager)
@@ -26,6 +27,7 @@ public class BaseEnemyEvent : MonoBehaviour
     [Header("Rewards / Linked Objects")]
     public GameObject barrierObject;
     public GameObject activateNextEvent;
+    //public int indexSceneNext;
 
 /////////////////////////////////////////////////////////////////////
 /// UNITY EVENTS
@@ -62,6 +64,11 @@ public class BaseEnemyEvent : MonoBehaviour
         }
 
         Debug.Log($"[{name}] Found {enemiesInArea.Count} enemies in area.");
+
+        if (NoGoingBackBarrier !=null)
+        {
+            NoGoingBackBarrier.SetActive(false);
+        }
     }
 
 /////////////////////////////////////////////////////////////////////
@@ -121,6 +128,11 @@ public class BaseEnemyEvent : MonoBehaviour
         if (other.CompareTag("Player") && objectiveManager != null)
         {
             objectiveManager.SetActiveObjective(this);
+
+            if (NoGoingBackBarrier !=null)
+            {
+                NoGoingBackBarrier.SetActive(true);
+            }
         }
     }
 

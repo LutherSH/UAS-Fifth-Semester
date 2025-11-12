@@ -20,7 +20,7 @@ public class DeadStateBow : TheStateBow
     {
         Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
-        //enemy.Despawn();
+        enemy.Despawn();
         enemy.eAanimation.SetTrigger("b_dies");
     }
 

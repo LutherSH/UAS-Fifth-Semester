@@ -20,7 +20,7 @@ public class DeadStateGun : TheStateGun
         //Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
         enemy.eGAnimation.SetTrigger("g_dies");
-        //enemy.Despawn();
+        enemy.Despawn();
     }
 
     ///////////////////////////////////////////////////////////////////////
