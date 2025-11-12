@@ -18,7 +18,8 @@ public class PatrolStateGun : TheStateGun
 /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Patrol");
+        //Debug.Log("Entering Patrol");
+        enemy.eGAnimation.SetBool("g_walk",true);
 
         if (enemy.nAgent == null) enemy.nAgent = enemy.GetComponent<NavMeshAgent>();
 
@@ -37,8 +38,8 @@ public class PatrolStateGun : TheStateGun
         enemy.isSpooked = false;
     }
 
-    ///////////////////////////////////////////////////////////////////////
-    /// STATE UPDATE
+///////////////////////////////////////////////////////////////////////
+/// STATE UPDATE
     public void Update()
     {
         if (enemy.nAgent == null) return;
@@ -76,15 +77,6 @@ public class PatrolStateGun : TheStateGun
         }
 
     }
-    
-///////////////////////////////////////////////////////////////////////
-/// STATE EXIT
-    public void Exit()
-    {
-        //Debug.Log("Exiting Patrol");
-        enemy.fov = enemy.defaultFov;
-    }
-
 ///////////////////////////////////////////////////////////////////////
 /// FIND AND SET WALKPOINT
     private void TryFindAndSetWalkPoint()
@@ -120,5 +112,13 @@ public class PatrolStateGun : TheStateGun
         }
 
         enemy.setAWalkPoint = false;
+    }    
+///////////////////////////////////////////////////////////////////////
+/// STATE EXIT
+    public void Exit()
+    {
+        //Debug.Log("Exiting Patrol");
+        enemy.fov = enemy.defaultFov;
+        enemy.eGAnimation.SetBool("g_walk",false);
     }
 }

@@ -17,9 +17,10 @@ public class DeadStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Dead State");
+        //Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
-        enemy.Despawn();
+        enemy.eGAnimation.SetTrigger("g_dies");
+        //enemy.Despawn();
     }
 
     ///////////////////////////////////////////////////////////////////////

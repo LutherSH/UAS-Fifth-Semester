@@ -18,6 +18,8 @@ public class IdleStateBow : TheStateBow
     /// STATE ENTER
     public void Enter()
     {
+        enemy.eAanimation.SetBool("b_idle", true);
+        
         //Debug.Log("Entering Idle");
         idleTimer = 0f;
         if (enemy.nAgent != null)
@@ -75,5 +77,7 @@ public class IdleStateBow : TheStateBow
         {
             enemy.nAgent.isStopped = false;
         }
+
+        enemy.eAanimation.SetBool("b_idle", false);
     }
 }

@@ -12,6 +12,7 @@ public class EnemyMelee : MonoBehaviour
     public Transform player;
     public LayerMask theGround, thePlayer;
     public bool isSpooked = false;
+    public Animator eMAnimator;
 
     ///////////////////////////////////////////////////////////////////////
     ///// Property For Patrol
@@ -55,7 +56,13 @@ public class EnemyMelee : MonoBehaviour
     public float fov = 90f;
     public float defaultFov;
     public LayerMask theWall;
+    
+    ///////////////////////////////////////////////////////////////////////
+    //// Property For Sounds
 
+    [Header("Audio Settings")]
+    public AudioSource audioSource;
+    public AudioClip shootClip;
     ///////////////////////////////////////////////////////////////////////
     /// START
 
@@ -64,6 +71,7 @@ public class EnemyMelee : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+        eMAnimator = GetComponent<Animator>();
 
         weaponCollider.enabled = false;
     }

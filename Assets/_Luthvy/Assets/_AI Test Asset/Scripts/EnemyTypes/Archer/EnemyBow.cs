@@ -12,6 +12,7 @@ public class EnemyBow : MonoBehaviour
     public Transform player;
     public LayerMask theGround, thePlayer;
     public bool isSpooked = false;
+    public Animator eAanimation;
 
     ///////////////////////////////////////////////////////////////////////
     ///// Property For Patrol
@@ -59,7 +60,13 @@ public class EnemyBow : MonoBehaviour
     public float fov = 90f;
     public float defaultFov;
     public LayerMask theWall;
+    
+    ///////////////////////////////////////////////////////////////////////
+    //// Property For Sounds
 
+    [Header("Audio Settings")]
+    public AudioSource audioSource;
+    public AudioClip shootClip;
     ///////////////////////////////////////////////////////////////////////
     /// START
 
@@ -68,6 +75,7 @@ public class EnemyBow : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+        eAanimation = GetComponent<Animator>();
     }
 
     void Start()

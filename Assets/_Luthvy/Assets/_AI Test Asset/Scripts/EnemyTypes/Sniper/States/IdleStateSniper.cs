@@ -20,6 +20,7 @@ public class IdleStateSniper : TheStateSniper
     public void Enter()
     {
         //Debug.Log("Entering Idle");
+        enemy.eSAnimator.SetBool("s_idle",true);
         idleTimer = 0f;
         if (enemy.nAgent != null)
         {
@@ -134,5 +135,7 @@ public class IdleStateSniper : TheStateSniper
             enemy.nAgent.isStopped = false;
             idleTimer = 0f;
         }
+
+        enemy.eSAnimator.SetBool("s_idle",false);
     }
 }

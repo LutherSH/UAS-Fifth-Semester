@@ -19,7 +19,8 @@ public class DeadStateMelee : TheStateMelee
     {
         Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
-        enemy.Despawn();
+        //enemy.Despawn();
+        enemy.eMAnimator.SetTrigger("m_dies");
     }
 
     ///////////////////////////////////////////////////////////////////////

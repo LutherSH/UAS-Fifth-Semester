@@ -18,8 +18,10 @@ public class AttackStateMelee : TheStateMelee
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("ATTAAAACCCCKKK");
+        //Debug.Log("ATTAAAACCCCKKK");
         //enemy.nAgent.isStopped = true;
+
+        enemy.eMAnimator.SetTrigger("m_attack");
         enemy.fov = 359f;
         isAttacking = false;
 
@@ -55,6 +57,14 @@ public class AttackStateMelee : TheStateMelee
             enemy.nAgent.isStopped = false;
             enemy.SwitchState(new ChaseStateMelee(enemy));
             return;
+        }
+    }
+
+    public void PlayShootSound()
+    {
+        if (enemy.audioSource != null && enemy.shootClip != null)
+        {
+            enemy.audioSource.PlayOneShot(enemy.shootClip);
         }
     }
 

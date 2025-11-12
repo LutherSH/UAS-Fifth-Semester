@@ -19,6 +19,7 @@ public class PatrolStateBow : TheStateBow
     public void Enter()
     {
         //Debug.Log("Entering Patrol");
+        enemy.eAanimation.SetBool("b_walk", true);
 
         if (enemy.nAgent == null) enemy.nAgent = enemy.GetComponent<NavMeshAgent>();
 
@@ -117,5 +118,6 @@ public class PatrolStateBow : TheStateBow
     {
         //Debug.Log("Exiting Patrol");
         enemy.fov = enemy.defaultFov;
+        enemy.eAanimation.SetBool("b_walk", false);
     }
 }

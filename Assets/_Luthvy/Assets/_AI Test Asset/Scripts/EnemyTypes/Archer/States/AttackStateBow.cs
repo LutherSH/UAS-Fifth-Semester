@@ -20,7 +20,7 @@ public class AttackStateBow : TheStateBow
     {
         //Debug.Log("ATTAAAACCCCKKK");
         //enemy.maxArrowSpeed = enemy.arrowSpeed * 1.5f;
-
+        enemy.eAanimation.SetTrigger("b_attack");
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
     }
@@ -114,12 +114,20 @@ public class AttackStateBow : TheStateBow
     //Debug.Log("Fired bullet at player (dir: " + dir + ")");
 }
 
+    public void PlayShootSound()
+    {
+        if (enemy.audioSource != null && enemy.shootClip != null)
+        {
+            enemy.audioSource.PlayOneShot(enemy.shootClip);
+        }
+    }
 
-///////////////////////////////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////////////
     /// STATE EXIT
 
     public void Exit()
     {
         //Debug.Log("Exiting Attack");
+        enemy.eAanimation.SetTrigger("b_attack");
     }
 }

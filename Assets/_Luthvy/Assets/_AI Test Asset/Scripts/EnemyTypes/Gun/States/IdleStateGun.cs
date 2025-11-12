@@ -18,7 +18,9 @@ public class IdleStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Idle");
+        //Debug.Log("Entering Idle");
+        enemy.eGAnimation.SetBool("g_idle",true);
+
         idleTimer = 0f;
         if (enemy.nAgent != null)
         {
@@ -73,5 +75,7 @@ public class IdleStateGun : TheStateGun
         {
             enemy.nAgent.isStopped = false;
         }
+
+        enemy.eGAnimation.SetBool("g_idle",false);
     }
 }
