@@ -48102,7 +48102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1513912068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48157,7 +48157,7 @@ Transform:
   m_GameObject: {fileID: 1513912067}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0.5926861, z: -0, w: 0.8054336}
-  m_LocalPosition: {x: 251.09, y: -207.01, z: -1008.33}
+  m_LocalPosition: {x: 482.5, y: -204.2, z: -515.13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -55013,7 +55013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1161decf31fb4943bdf5438490dc1fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerBehaviour: {fileID: 0}
+  playerBehaviour: {fileID: 1257078985}
   hitCollider: {fileID: 0}
   hitBoxParent: {fileID: 567047388}
   nAgent: {fileID: 1701054239}
