@@ -17,6 +17,7 @@ public class ChaseStateBow : TheStateBow
     /// STATE ENTER
     public void Enter()
     {
+        enemy.eAanimation.SetBool("b_walk",true);
         //Debug.Log("Entering Chase");
         if (enemy.nAgent != null)
         {
@@ -71,5 +72,6 @@ public void Update()
     {
         //Debug.Log("Exiting Chase");
         //enemy.nAgent.updateRotation = true;
+        enemy.eAanimation.SetBool("b_walk",false);
     }
 }

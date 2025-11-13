@@ -17,7 +17,9 @@ public class ChaseStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("Entering Chase");
+        //Debug.Log("Entering Chase");
+        enemy.eGAnimation.SetBool("g_walk",true);
+
         if (enemy.nAgent != null)
         {
             enemy.nAgent.isStopped = false;
@@ -69,7 +71,8 @@ public void Update()
     /// STATE EXIT
     public void Exit()
     {
-        Debug.Log("Exiting Chase");
+        enemy.eGAnimation.SetBool("g_walk",false);
+        //Debug.Log("Exiting Chase");
         //enemy.nAgent.updateRotation = true;
     }
 }

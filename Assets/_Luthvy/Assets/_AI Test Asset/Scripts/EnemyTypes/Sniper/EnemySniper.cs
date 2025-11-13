@@ -13,6 +13,7 @@ public class EnemySniper : MonoBehaviour
     public Transform player;
     public LayerMask theGround, thePlayer;
     public bool isSpooked = false;
+    public Animator eSAnimator;
 
     ///////////////////////////////////////////////////////////////////////
     ///// Property For Patrol
@@ -64,6 +65,12 @@ public class EnemySniper : MonoBehaviour
     public LayerMask theWall;
 
     ///////////////////////////////////////////////////////////////////////
+    //// Property For Sounds
+
+    [Header("Audio Settings")]
+    public AudioSource audioSource;
+    public AudioClip shootClip;
+    ///////////////////////////////////////////////////////////////////////
     /// START
 
     private void Awake()
@@ -71,6 +78,8 @@ public class EnemySniper : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+        eSAnimator = GetComponent<Animator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Start()

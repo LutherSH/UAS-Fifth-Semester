@@ -20,6 +20,7 @@ public class DeadStateSniper : TheStateSniper
         Debug.Log("Dead State");
         enemy.nAgent.isStopped = true;
         enemy.Despawn();
+        enemy.eSAnimator.SetTrigger("s_dies");
     }
 
     ///////////////////////////////////////////////////////////////////////

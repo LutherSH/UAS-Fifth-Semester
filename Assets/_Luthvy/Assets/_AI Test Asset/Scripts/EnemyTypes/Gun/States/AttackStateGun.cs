@@ -17,7 +17,9 @@ public class AttackStateGun : TheStateGun
     /// STATE ENTER
     public void Enter()
     {
-        Debug.Log("ATTAAAACCCCKKK");
+        //Debug.Log("ATTAAAACCCCKKK");
+        enemy.eGAnimation.SetTrigger("g_attack");
+
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
     }
@@ -123,11 +125,20 @@ private IEnumerator SpawnTrail(Vector3 hitPoint)
     GameObject.Destroy(trail, tr.time); // let it fade naturally
 }
 
+    public void PlayShootSound()
+    {
+        if (enemy.audioSource != null && enemy.shootClip != null)
+        {
+            enemy.audioSource.PlayOneShot(enemy.shootClip);
+        }
+    }
+
     ///////////////////////////////////////////////////////////////////////
     /// STATE EXIT
 
     public void Exit()
     {
         //Debug.Log("Exiting Attack");
+
     }
 }

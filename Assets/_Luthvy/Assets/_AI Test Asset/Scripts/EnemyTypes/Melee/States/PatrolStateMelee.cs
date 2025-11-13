@@ -20,6 +20,8 @@ public class PatrolStateMelee : TheStateMelee
     {
         //Debug.Log("Entering Patrol");
 
+        enemy.eMAnimator.SetBool("m_walk",true);
+
         if (enemy.nAgent == null) enemy.nAgent = enemy.GetComponent<NavMeshAgent>();
 
         enemy.nAgent.isStopped = false;
@@ -37,8 +39,8 @@ public class PatrolStateMelee : TheStateMelee
         enemy.isSpooked = false;
     }
 
-    ///////////////////////////////////////////////////////////////////////
-    /// STATE UPDATE
+///////////////////////////////////////////////////////////////////////
+/// STATE UPDATE
     public void Update()
     {
         if (enemy.nAgent == null) return;
@@ -74,14 +76,6 @@ public class PatrolStateMelee : TheStateMelee
             );
         }
 
-    }
-    
-///////////////////////////////////////////////////////////////////////
-/// STATE EXIT
-    public void Exit()
-    {
-        //Debug.Log("Exiting Patrol");
-        enemy.fov = enemy.defaultFov;
     }
 
 ///////////////////////////////////////////////////////////////////////
@@ -119,4 +113,16 @@ public class PatrolStateMelee : TheStateMelee
 
         enemy.setAWalkPoint = false;
     }
+    
+///////////////////////////////////////////////////////////////////////
+/// STATE EXIT
+    public void Exit()
+    {
+        //Debug.Log("Exiting Patrol");
+        enemy.fov = enemy.defaultFov;
+
+        enemy.eMAnimator.SetBool("m_walk", true);
+    }
+
+
 }

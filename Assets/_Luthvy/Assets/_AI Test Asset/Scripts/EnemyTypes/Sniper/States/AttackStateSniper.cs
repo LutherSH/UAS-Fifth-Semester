@@ -20,6 +20,7 @@ public class AttackStateSniper : TheStateSniper
         //Debug.Log("ATTAAAACCCCKKK");
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
+        enemy.eSAnimator.SetTrigger("s_attack");
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -115,6 +116,14 @@ private IEnumerator SpawnTrail(Vector3 hitPoint)
     trail.transform.position = end;
     GameObject.Destroy(trail, tr.time); // let it fade naturally
 }
+
+    public void PlayShootSound()
+    {
+        if (enemy.audioSource != null && enemy.shootClip != null)
+        {
+            enemy.audioSource.PlayOneShot(enemy.shootClip);
+        }
+    }
 
     ///////////////////////////////////////////////////////////////////////
     /// STATE EXIT

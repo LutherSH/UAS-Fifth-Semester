@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.EventSystems;
 
 public class SceneManagerTG : MonoBehaviour
 {
     public string sceneName;
     public GameObject gameOverScreen;
     public GameObject winScreen;
+    public GameObject playerTrue;
     private float delayGameOver = 0.03f;
 
     //////////////////////////////////////////////////////////
@@ -16,6 +18,7 @@ public class SceneManagerTG : MonoBehaviour
     {
         gameOverScreen.SetActive(false);
         Time.timeScale = 1f;
+        playerTrue = GameObject.Find("PlayerTrue");
     }
 
     void Update()
@@ -54,6 +57,9 @@ public class SceneManagerTG : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+        //gameOverScreen.SetActive(true);
+        playerTrue.SetActive(false);
+        EnsureEventSystem();
         StartCoroutine(DelayDeath());
     }
 
@@ -72,6 +78,16 @@ public class SceneManagerTG : MonoBehaviour
     {
         yield return new WaitForSeconds(delayGameOver);
         gameOverScreen.SetActive(true);
+        playerTrue.SetActive(true);
         Time.timeScale = 0f;
+    }
+
+    void EnsureEventSystem()
+    {
+        if (EventSystem.current == null)
+        {
+            new GameObject("EventSystem", typeof(EventSystem), typeof(StandaloneInputModule));
+            Debug.LogWarning("ensure");
+        }
     }
 }

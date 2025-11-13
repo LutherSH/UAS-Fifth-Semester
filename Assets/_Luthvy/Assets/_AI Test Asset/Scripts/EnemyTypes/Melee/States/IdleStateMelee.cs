@@ -19,6 +19,8 @@ public class IdleStateMelee : TheStateMelee
     public void Enter()
     {
         //Debug.Log("Entering Idle");
+        enemy.eMAnimator.SetBool("m_idle",true);
+
         idleTimer = 0f;
         if (enemy.nAgent != null)
         {
@@ -71,6 +73,8 @@ public class IdleStateMelee : TheStateMelee
     public void Exit()
     {
         //Debug.Log("Exiting Idle");
+        enemy.eMAnimator.SetBool("m_idle", false);
+        
         if (enemy.nAgent != null)
         {
             enemy.nAgent.isStopped = false;

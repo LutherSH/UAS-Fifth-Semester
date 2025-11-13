@@ -18,6 +18,8 @@ public class ChaseStateMelee : TheStateMelee
     public void Enter()
     {
         //Debug.Log("Entering Chase");
+
+        enemy.eMAnimator.SetBool("m_walk",true);
         if (enemy.nAgent != null)
         {
             enemy.nAgent.isStopped = false;
@@ -71,5 +73,6 @@ public void Update()
     {
         //Debug.Log("Exiting Chase");
         //enemy.nAgent.updateRotation = true;  
+        enemy.eMAnimator.SetBool("m_walk",false);
     }
 }
