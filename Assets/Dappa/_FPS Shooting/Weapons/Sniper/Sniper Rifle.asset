@@ -49,7 +49,7 @@ MonoBehaviour:
     scale: {x: 1, y: 1, z: 1}
   bulletDamage: 80
   headshotMult: 1.5
-  bulletRange: 100
+  bulletRange: 500
   bulletSpread: 0.25
   aimSpreadMultiplier: 0
   aimDownMultiplier: 0.25
