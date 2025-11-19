@@ -16,9 +16,9 @@ public class UnderwaterSwimmingMovement : MovementType
 
     public override void Movement()
     {
-        Vector3 swim = swimming.cameraMovement.TransformDirection(new Vector3(playerInput.input.x, 0, playerInput.input.y)) * 2f;
+        Vector3 swim = swimming.cameraMovement.TransformDirection(new Vector3(playerInput.input.x, 0, playerInput.input.y)) * (swimming.swimSpeed / 2);
         swim += Vector3.up * playerInput.elevate;
-        swim = Vector3.ClampMagnitude(swim, 2f);
+        //swim = Vector3.ClampMagnitude(swim, 2f);
         movement.Move(swim, 1f, 0f);
     }
 
