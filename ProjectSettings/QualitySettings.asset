@@ -255,12 +255,12 @@ QualitySettings:
     name: Ultra
     pixelLightCount: 4
     shadows: 2
-    shadowResolution: 2
+    shadowResolution: 1
     shadowProjection: 1
     shadowCascades: 2
     shadowDistance: 200
     shadowNearPlaneOffset: 3
-    shadowCascade2Split: 0.14907621
+    shadowCascade2Split: 0.36374536
     shadowCascade4Split: {x: 0.147747, y: 0.2684682, z: 0.7729732}
     shadowmaskMode: 1
     skinWeights: 4
@@ -275,7 +275,7 @@ QualitySettings:
     useLegacyDetailDistribution: 1
     vSyncCount: 1
     realtimeGICPUUsage: 100
-    lodBias: 10
+    lodBias: 1
     maximumLODLevel: 0
     enableLODCrossFade: 1
     streamingMipmapsActive: 0
@@ -290,13 +290,13 @@ QualitySettings:
     asyncUploadPersistentBuffer: 1
     resolutionScalingFixedDPIFactor: 1
     customRenderPipeline: {fileID: 0}
-    terrainQualityOverrides: 32
+    terrainQualityOverrides: 48
     terrainPixelError: 1
     terrainDetailDensityScale: 1
     terrainBasemapDistance: 1000
     terrainDetailDistance: 80
-    terrainTreeDistance: 5000
-    terrainBillboardStart: 200
+    terrainTreeDistance: 250
+    terrainBillboardStart: 250
     terrainFadeLength: 5
     terrainMaxTrees: 0
     excludedTargetPlatforms: []
