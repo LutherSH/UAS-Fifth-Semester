@@ -121,7 +121,7 @@ public class PatrolStateMelee : TheStateMelee
         //Debug.Log("Exiting Patrol");
         enemy.fov = enemy.defaultFov;
 
-        enemy.eMAnimator.SetBool("m_walk", true);
+        enemy.eMAnimator.SetBool("m_walk", false);
     }
 
 
