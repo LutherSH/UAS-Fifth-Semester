@@ -43,6 +43,7 @@ public class EnemyGun : MonoBehaviour
 
     [Header("Attack Settings")]
     public bool playerInAttackRange;
+    public bool allowShoot = false;
     public Transform firePoint;
     public GameObject bulletTrail;
     public GameObject muzzleFlash;
@@ -78,7 +79,7 @@ public class EnemyGun : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
-        eGAnimation = GetComponent<Animator>();
+        //eGAnimation = GetComponent<Animator>();
     }
 
     void Start()
@@ -86,6 +87,7 @@ public class EnemyGun : MonoBehaviour
         SwitchState(new IdleStateGun(this)); // IDLE
         visionRange = sightRange;
         defaultFov = fov;
+        allowShoot = false;
     }
     ///////////////////////////////////////////////////////////////////////
     /// UPDATE

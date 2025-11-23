@@ -35,7 +35,7 @@ public void Update()
     enemy.transform.rotation = Quaternion.LookRotation(lookDir);
 
     // Fire if cooldown is ready
-    if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange)
+    if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange && enemy.allowShoot)
     {
         FireGun();
         enemy.nextFireTime = Time.time + enemy.fireCooldown;
