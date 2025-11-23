@@ -61361,6 +61361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2088934392}
   - component: {fileID: 2088934391}
+  - component: {fileID: 2088934393}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -61413,7 +61414,7 @@ Light:
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
-  m_Flare: {fileID: 0}
+  m_Flare: {fileID: 12100000, guid: f5f5b801d7dfed849a729782e5e28252, type: 2}
   m_RenderMode: 0
   m_CullingMask:
     serializedVersion: 2
@@ -61445,6 +61446,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 225484199}
   m_LocalEulerAnglesHint: {x: 36.303, y: -528.789, z: -595.612}
+--- !u!123 &2088934393
+LensFlare:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088934389}
+  m_Enabled: 1
+  m_Flare: {fileID: 12100000, guid: f5f5b801d7dfed849a729782e5e28252, type: 2}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Brightness: 79.31
+  m_FadeSpeed: 0
+  m_IgnoreLayers:
+    serializedVersion: 2
+    m_Bits: 6
+  m_Directional: 0
 --- !u!1 &2092488889
 GameObject:
   m_ObjectHideFlags: 0
