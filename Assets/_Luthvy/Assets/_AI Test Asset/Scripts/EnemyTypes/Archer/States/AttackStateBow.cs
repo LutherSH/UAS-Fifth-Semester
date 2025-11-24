@@ -9,6 +9,7 @@ public class AttackStateBow : TheStateBow
 /// PROPERTIES OF STATE
     private EnemyBow enemy;
     private Transform player;
+
     public AttackStateBow(EnemyBow enemyAI)//, Transform playerTrasform) // REGISTER STATE
     {
         enemy = enemyAI;
@@ -23,6 +24,7 @@ public class AttackStateBow : TheStateBow
         enemy.eAanimation.SetTrigger("b_attack");
         enemy.nAgent.isStopped = true;
         enemy.fov = 359f;
+        //enemy.StartCoroutine(enemy.FirstDelay());
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -45,7 +47,7 @@ public class AttackStateBow : TheStateBow
             );
         }
 
-        if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange)
+        if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange && enemy.allowShoot)
         {
             FireBow();
             enemy.nextFireTime = Time.time + enemy.fireCooldown;

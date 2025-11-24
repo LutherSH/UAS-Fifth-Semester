@@ -654,7 +654,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4860051150504343629
 Transform:
   m_ObjectHideFlags: 0
@@ -1200,6 +1200,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483648
   isSpooked: 0
+  eSAnimator: {fileID: 0}
   reactionDelay: 1.5
   playerInSightRange: 0
   sightRange: 70
@@ -1221,6 +1222,8 @@ MonoBehaviour:
   theWall:
     serializedVersion: 2
     m_Bits: 524288
+  audioSource: {fileID: 0}
+  shootClip: {fileID: 0}
 --- !u!195 &4403968141243081986
 NavMeshAgent:
   m_ObjectHideFlags: 0

@@ -25,7 +25,7 @@ public class AttackStateMelee : TheStateMelee
         enemy.fov = 359f;
         isAttacking = false;
 
-        StartAttackWindow(); // <---------
+        //StartAttackWindow(); // <---------
     }
 
     ///////////////////////////////////////////////////////////////////////
@@ -33,6 +33,7 @@ public class AttackStateMelee : TheStateMelee
 
     public void Update()
     {
+        enemy.triggerHitboxAttacking = isAttacking;
         // Face the player
         Vector3 dir = (enemy.player.position - enemy.transform.position);
         dir.y = 0;
@@ -68,21 +69,6 @@ public class AttackStateMelee : TheStateMelee
         }
     }
 
-    ///////////////////////////////////////////////////////////////////////
-    /// ANIMATOR CALL
-    public void StartAttackWindow()
-    {
-        if (enemy.weaponCollider != null)
-            enemy.weaponCollider.enabled = true;
-    }
-
-    public void EndAttackWindow()
-    {
-        if (enemy.weaponCollider != null)
-            enemy.weaponCollider.enabled = false;
-
-        isAttacking = false;
-    }
 
     ///////////////////////////////////////////////////////////////////////
     /// STATE EXIT

@@ -42,6 +42,7 @@ public class EnemyMelee : MonoBehaviour
     [Header("Attack Settings")]
     public bool playerInAttackRange;
     public Collider weaponCollider;
+    public bool triggerHitboxAttacking = false;
     public float attackRange;
     public int attackDamage = 10;
     public float attackCooldown = 2f;
@@ -71,7 +72,7 @@ public class EnemyMelee : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
-        eMAnimator = GetComponent<Animator>();
+        //eMAnimator = GetComponent<Animator>();
 
         weaponCollider.enabled = false;
     }
@@ -81,6 +82,7 @@ public class EnemyMelee : MonoBehaviour
         SwitchState(new IdleStateMelee(this)); // IDLE
         visionRange = sightRange;
         defaultFov = fov;
+        triggerHitboxAttacking = false;
     }
     ///////////////////////////////////////////////////////////////////////
     /// UPDATE
@@ -175,6 +177,20 @@ public class EnemyMelee : MonoBehaviour
     public void Despawn()
     {
         Destroy(gameObject);
+    }
+
+    ///////////////////////////////////////////////////////////////////////
+    /// ANIMATOR CALL
+    public void StartAttackWindow()
+    {
+        if (weaponCollider != null)
+            weaponCollider.enabled = true;
+    }
+
+    public void EndAttackWindow()
+    {
+        if (weaponCollider != null)
+            weaponCollider.enabled = false;
     }
     ///////////////////////////////////////////////////////////////////////
     /// DRAW GIZMIOZ

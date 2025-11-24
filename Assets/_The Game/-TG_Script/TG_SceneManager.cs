@@ -11,6 +11,7 @@ public class SceneManagerTG : MonoBehaviour
     public GameObject winScreen;
     public GameObject playerTrue;
     private float delayGameOver = 0.03f;
+    private int sceneNummer;
 
     //////////////////////////////////////////////////////////
 
@@ -45,7 +46,14 @@ public class SceneManagerTG : MonoBehaviour
 
     public void Gameplay()
     {
-        SceneManager.LoadScene("AI Test 1");
+        SceneManager.LoadScene(1);
+        sceneNummer = 1;
+    }
+
+    public void NextStage()
+    {
+        sceneNummer++;
+        SceneManager.LoadScene(sceneNummer);
     }
     public void MainMenu()
     {

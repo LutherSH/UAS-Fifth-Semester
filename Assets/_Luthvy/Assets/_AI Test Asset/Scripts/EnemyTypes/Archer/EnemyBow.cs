@@ -1,3 +1,4 @@
+using System.Collections;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.AI;
@@ -41,6 +42,7 @@ public class EnemyBow : MonoBehaviour
 
     [Header("Attack Settings")]
     public bool playerInAttackRange;
+    public bool allowShoot = false;
     public float attackRange;
     public float bulletInaccuracy = 2;
     public float maxAccuracy = 1;
@@ -75,7 +77,7 @@ public class EnemyBow : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
-        eAanimation = GetComponent<Animator>();
+        //eAanimation = GetComponent<Animator>();
     }
 
     void Start()
@@ -178,6 +180,7 @@ public class EnemyBow : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
 
     ///////////////////////////////////////////////////////////////////////
     /// DRAW GIZMIOZ
