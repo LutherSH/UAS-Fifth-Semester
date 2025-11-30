@@ -12,7 +12,7 @@ public class SceneManagerTG : MonoBehaviour
     public GameObject playerTrue;
     private float delayGameOver = 0.03f;
     private int sceneNummer;
-
+    public InteractionController interactionController;
     //////////////////////////////////////////////////////////
 
     private void Start()
@@ -20,8 +20,13 @@ public class SceneManagerTG : MonoBehaviour
         gameOverScreen.SetActive(false);
         Time.timeScale = 1f;
         playerTrue = GameObject.Find("PlayerTrue");
+        RestartIC();
     }
 
+    void Awake()
+    {
+        RestartIC();
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Return))
@@ -52,7 +57,6 @@ public class SceneManagerTG : MonoBehaviour
 
     public void NextStage()
     {
-        sceneNummer++;
         SceneManager.LoadScene(sceneNummer);
     }
     public void MainMenu()
@@ -73,8 +77,15 @@ public class SceneManagerTG : MonoBehaviour
 
     public void RetryGame()
     {
-        Time.timeScale = 1f;
+        interactionController.enabled = false;
+        //interactionController.enabled = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
+
+    private void RestartIC()
+    {
+        StartCoroutine(ResetIC());
     }
     public void Quit()
     {
@@ -87,7 +98,18 @@ public class SceneManagerTG : MonoBehaviour
         yield return new WaitForSeconds(delayGameOver);
         gameOverScreen.SetActive(true);
         playerTrue.SetActive(true);
+        //InteractionController
         Time.timeScale = 0f;
+    }
+
+    IEnumerator ResetIC()
+    {
+        //playerTrue.SetActive(true);
+        interactionController.enabled = false;
+        Debug.LogWarning("Ic off");
+        yield return new WaitForSeconds(1);
+        Debug.LogWarning("Ic on");
+        interactionController.enabled = true;
     }
 
     void EnsureEventSystem()

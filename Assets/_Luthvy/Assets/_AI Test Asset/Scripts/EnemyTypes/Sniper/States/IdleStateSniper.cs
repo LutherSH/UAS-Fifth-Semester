@@ -46,12 +46,13 @@ public class IdleStateSniper : TheStateSniper
             Ray ray = new Ray(enemy.firePoint.position, shootDir);
             RaycastHit hit;
             Vector3 hitPoint;
+            enemy.enemySpotted = true;
 
             if (Physics.Raycast(ray, out hit, enemy.attackRange, enemy.thePlayer | enemy.theWall))
             {
                 hitPoint = hit.point;
 
-                if (enemy.bulletTrail != null) enemy.StartCoroutine(SpawnTrail(hitPoint));
+                if (enemy.bulletTrail != null && enemy.enemySpotted) enemy.StartCoroutine(SpawnTrail(hitPoint));
                 //Debug.Log("Gun hit: " + hit.collider.name);
 
                 // if (hit.collider.CompareTag("Player"))

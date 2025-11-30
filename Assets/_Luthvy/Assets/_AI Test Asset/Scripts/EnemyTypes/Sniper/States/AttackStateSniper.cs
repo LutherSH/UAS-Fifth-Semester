@@ -36,8 +36,12 @@ public void Update()
     // Fire if cooldown is ready
     if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange)
     {
-        FireGun();
-        enemy.nextFireTime = Time.time + enemy.fireCooldown;
+        if(enemy.allowShoot)
+        {
+            FireGun();
+            enemy.nextFireTime = Time.time + enemy.fireCooldown; 
+            enemy.SwitchState(new IdleStateSniper(enemy));
+        }
     }
 }
 
@@ -59,7 +63,7 @@ private void FireGun()
     
     Ray ray = new Ray(enemy.firePoint.position, shootDir);
     RaycastHit hit;
-    Vector3 hitPoint;
+    Vector3 hitPoint; 
 
     if (Physics.Raycast(ray, out hit, enemy.attackRange, enemy.thePlayer | enemy.theWall))
     {
@@ -79,6 +83,7 @@ private void FireGun()
 
         if (enemy.hitEffect != null)
             GameObject.Instantiate(enemy.hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+
     }
     // else
     // {

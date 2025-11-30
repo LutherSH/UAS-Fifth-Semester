@@ -14,6 +14,7 @@ public class EnemySniper : MonoBehaviour
     public LayerMask theGround, thePlayer;
     public bool isSpooked = false;
     public Animator eSAnimator;
+    public bool allowShoot = false;
 
     ///////////////////////////////////////////////////////////////////////
     ///// Property For Patrol
@@ -53,7 +54,9 @@ public class EnemySniper : MonoBehaviour
     public float attackRange;
     public int attackDamage = 40;
     public float fireCooldown = 2f;
-    [HideInInspector]public float nextFireTime = 0f;
+
+    [HideInInspector] public bool enemySpotted = false;
+    [HideInInspector] public float nextFireTime = 0f;
 
     ///////////////////////////////////////////////////////////////////////
     //// Property For Vision
@@ -78,7 +81,7 @@ public class EnemySniper : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
-        eSAnimator = GetComponent<Animator>();
+        //eSAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
     }
 
