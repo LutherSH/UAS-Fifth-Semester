@@ -10,6 +10,8 @@ public class SurfaceSwimmingMovement : MovementType
     private LayerMask topWaterLayer;
     [HideInInspector]
     public Transform cameraMovement;
+
+    public float swimSpeed = 6f;
     
     bool canJumpOutOfWater;
 
@@ -96,7 +98,7 @@ public class SurfaceSwimmingMovement : MovementType
         float dif = transform.position.y - wantedYPos;
         float swimAdjust = Mathf.Sin(dif);
         Vector3 move = new Vector3(playerInput.input.x, 0, playerInput.input.y);
-        move = transform.TransformDirection(move) * 2f;
+        move = transform.TransformDirection(move) * swimSpeed;
 
         bool isTreading = (move.sqrMagnitude < 0.02f);
         treadTime = Mathf.PingPong(treadTime + Time.deltaTime, isTreading ? 0.5f : 0.25f);
@@ -143,7 +145,7 @@ public class SurfaceSwimmingMovement : MovementType
         {
             float wantedYPos = getWaterLevel();
             float dif = transform.position.y - wantedYPos;
-            Debug.Log(dif);
+            //Debug.Log(dif);
             if (playerStatus != changeTo) //If we are not swimming
             {
                 bool swim = (dif <= 0.1f && movement.controller.velocity.y <= 0); //Check to see if we can swim down

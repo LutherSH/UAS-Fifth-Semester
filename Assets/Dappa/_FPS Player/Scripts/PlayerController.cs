@@ -38,6 +38,20 @@ public class PlayerController : MonoBehaviour
     WallrunMovement wallrun;
     SurfaceSwimmingMovement swimming;
 
+    private bool useFootSteps = true;
+    [HideInInspector] public Camera playerCamera;
+    private CharacterController characterController;
+
+    [Header("Footstep Parameters")]
+    [SerializeField] private float baseStepSpeed = 0.5f;
+    [SerializeField] private float crouchStepMultiplier = 1.5f;
+    [SerializeField] private float sprintStepMultiplier = 0.6f;
+    [SerializeField] private AudioSource footstepAudioSource = default;
+    [SerializeField] private AudioClip[] grassClips = default;
+    [SerializeField] private AudioClip[] waterClips = default;
+    private float footstepTimer = 0;
+    private float GetCurrentOffset => status == Status.crouching ? baseStepSpeed * crouchStepMultiplier : status == Status.sprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
+
     public void ChangeStatus(Status s)
     {
         if (status == s) return;
@@ -87,6 +101,8 @@ public class PlayerController : MonoBehaviour
         movement.AddToReset(() => { status = Status.walking; });
 
         camera = GetComponentInChildren<CameraMovement>();
+        playerCamera = GetComponentInChildren<Camera>();
+        characterController = GetComponent<CharacterController>();
 
         if (GetComponentInChildren<AnimateLean>())
             animateLean = GetComponentInChildren<AnimateLean>();
@@ -112,6 +128,8 @@ public class PlayerController : MonoBehaviour
             if(moveType.enabled)
                 moveType.Check(canInteract);
         }
+        if (useFootSteps)
+            HandleFootsteps();
 
         //Misc
         UpdateLean();
@@ -304,6 +322,40 @@ public class PlayerController : MonoBehaviour
         top += (transform.up * info.radius);
 
         return (Physics.CapsuleCastAll(top, bottom, 0.25f, transform.right * dir, 0.05f, layer).Length >= 1);
+    }
+
+    private void HandleFootsteps()
+    {
+        if (!movement.grounded)
+            return; 
+        if (playerInput.input == Vector2.zero)
+            return;
+
+        footstepTimer -= Time.deltaTime;
+
+        if (footstepTimer <= 0)
+        {
+            if (Physics.Raycast(characterController.transform.position, Vector3.down, out RaycastHit hit, 3))
+            {
+                switch (hit.collider.tag)
+                {
+                    case "Footsteps/GRASS":
+                        footstepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
+                        Debug.Log("Grass sound played");
+                        break;
+                    case "Footsteps/WATER":
+                        footstepAudioSource.PlayOneShot(waterClips[UnityEngine.Random.Range(0, waterClips.Length - 1)]);
+                        Debug.Log("Water sound played");
+                        break;
+                    default:
+                        footstepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
+                        Debug.Log("Default sound played");
+                        break;
+                }
+
+                footstepTimer = GetCurrentOffset;
+            }
+        }
     }
 }
 
