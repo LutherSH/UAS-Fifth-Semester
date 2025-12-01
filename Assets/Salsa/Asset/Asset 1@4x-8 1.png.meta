@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: d2da50644f4a1964996f70da355fb874
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Asset 1@4x-8 1_0
+      rect:
+        serializedVersion: 2
+        x: 1314
+        y: 4621
+        width: 3679
+        height: 2042
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16057806fc2bba842aefd28feb6a3bf0
+      internalID: 1780735494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset 1@4x-8 1_4
+      rect:
+        serializedVersion: 2
+        x: 6302
+        y: 4741
+        width: 3218
+        height: 2051
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 857f6164cc31fde4ca0e737a847e9704
+      internalID: -1146176864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset 1@4x-8 1_18
+      rect:
+        serializedVersion: 2
+        x: 1748
+        y: 2163
+        width: 3243
+        height: 1543
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a7f152df3e9554c8205ac8df2a0892
+      internalID: -799707109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset 1@4x-8 1_26
+      rect:
+        serializedVersion: 2
+        x: 6557
+        y: 2036
+        width: 3246
+        height: 1550
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e67022971116e047abc30bc33d73410
+      internalID: 1268094570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset 1@4x-8 1_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 5556
+        height: 927
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d02dc5dab01b342810ad451d549e04
+      internalID: 994767427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Asset 1@4x-8 1_61
+      rect:
+        serializedVersion: 2
+        x: 7067
+        y: 0
+        width: 4209
+        height: 790
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 643d730de5b5e7f41b68f427eb46bec6
+      internalID: -1594639469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: ecb5eef911af1f0429fb588eddc56c77
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Asset 1@4x-8 1_0: 1780735494
+      Asset 1@4x-8 1_1: 1694003892
+      Asset 1@4x-8 1_10: -591892352
+      Asset 1@4x-8 1_11: -1373128080
+      Asset 1@4x-8 1_12: 1772719204
+      Asset 1@4x-8 1_13: -1400057548
+      Asset 1@4x-8 1_14: 2094015567
+      Asset 1@4x-8 1_15: 1659848159
+      Asset 1@4x-8 1_16: 1894629674
+      Asset 1@4x-8 1_17: -1101480540
+      Asset 1@4x-8 1_18: -799707109
+      Asset 1@4x-8 1_19: -904950205
+      Asset 1@4x-8 1_2: 864778239
+      Asset 1@4x-8 1_20: -286377320
+      Asset 1@4x-8 1_21: 1715199198
+      Asset 1@4x-8 1_22: 2001550831
+      Asset 1@4x-8 1_23: -1263381076
+      Asset 1@4x-8 1_24: -1402437551
+      Asset 1@4x-8 1_25: -195342196
+      Asset 1@4x-8 1_26: 1268094570
+      Asset 1@4x-8 1_27: -517951967
+      Asset 1@4x-8 1_28: -2093875347
+      Asset 1@4x-8 1_29: 78537436
+      Asset 1@4x-8 1_3: -937337485
+      Asset 1@4x-8 1_30: 1100414110
+      Asset 1@4x-8 1_31: 481787226
+      Asset 1@4x-8 1_32: 621072685
+      Asset 1@4x-8 1_33: -191946854
+      Asset 1@4x-8 1_34: -1163784404
+      Asset 1@4x-8 1_35: 686413708
+      Asset 1@4x-8 1_36: -1849792277
+      Asset 1@4x-8 1_37: -423649165
+      Asset 1@4x-8 1_38: -1796211380
+      Asset 1@4x-8 1_39: 51842802
+      Asset 1@4x-8 1_4: -1146176864
+      Asset 1@4x-8 1_40: 1313247873
+      Asset 1@4x-8 1_41: 279888604
+      Asset 1@4x-8 1_42: -2027467553
+      Asset 1@4x-8 1_43: -601417928
+      Asset 1@4x-8 1_44: -2031788765
+      Asset 1@4x-8 1_45: -896500075
+      Asset 1@4x-8 1_46: -1687434790
+      Asset 1@4x-8 1_47: 1182374329
+      Asset 1@4x-8 1_48: -2107871351
+      Asset 1@4x-8 1_49: -9909161
+      Asset 1@4x-8 1_5: 889727500
+      Asset 1@4x-8 1_50: 1763285038
+      Asset 1@4x-8 1_51: -937500158
+      Asset 1@4x-8 1_52: -1895520918
+      Asset 1@4x-8 1_53: 994767427
+      Asset 1@4x-8 1_54: 202047260
+      Asset 1@4x-8 1_55: 1796553769
+      Asset 1@4x-8 1_56: -438539686
+      Asset 1@4x-8 1_57: 779692626
+      Asset 1@4x-8 1_58: 592979546
+      Asset 1@4x-8 1_59: -1570433002
+      Asset 1@4x-8 1_6: -161877691
+      Asset 1@4x-8 1_60: -515468947
+      Asset 1@4x-8 1_61: -1594639469
+      Asset 1@4x-8 1_62: 1347922640
+      Asset 1@4x-8 1_63: -1115959588
+      Asset 1@4x-8 1_64: -264682992
+      Asset 1@4x-8 1_65: -2007007092
+      Asset 1@4x-8 1_66: -209899919
+      Asset 1@4x-8 1_67: -612359314
+      Asset 1@4x-8 1_68: -485136419
+      Asset 1@4x-8 1_69: 2044904794
+      Asset 1@4x-8 1_7: 731098863
+      Asset 1@4x-8 1_70: 1951548569
+      Asset 1@4x-8 1_71: 1905078911
+      Asset 1@4x-8 1_72: 53831237
+      Asset 1@4x-8 1_73: -192676429
+      Asset 1@4x-8 1_8: -285165355
+      Asset 1@4x-8 1_9: 385192086
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,314 @@
+fileFormatVersion: 2
+guid: db18ad239dd2cea4c9a3b99619dd8f89
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logo revisi@4x-8_0
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 4681
+        width: 3666
+        height: 2015
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 647f3bd6bbcbb5f45bdd7f888b2fc743
+      internalID: -851285492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo revisi@4x-8_4
+      rect:
+        serializedVersion: 2
+        x: 6335
+        y: 4749
+        width: 3153
+        height: 2065
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd85ea2537bb36547a9a00a40c58618a
+      internalID: -789147679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo revisi@4x-8_18
+      rect:
+        serializedVersion: 2
+        x: 1759
+        y: 2178
+        width: 3243
+        height: 1372
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79e6de1a5903eb548aebe2b2d9d5da13
+      internalID: 1599848491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo revisi@4x-8_26
+      rect:
+        serializedVersion: 2
+        x: 6610
+        y: 2012
+        width: 3244
+        height: 1411
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbabaf25491991e409e0bd2c13ea1f90
+      internalID: 485027778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo revisi@4x-8_53
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 5333
+        height: 768
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd9569a204b7f64eae195ef53cbe2a9
+      internalID: 295274413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo revisi@4x-8_1
+      rect:
+        serializedVersion: 2
+        x: 7074
+        y: 0
+        width: 4194
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05916f4534e745a47b76132a77a26022
+      internalID: 1625190007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      logo revisi@4x-8_0: -851285492
+      logo revisi@4x-8_1: 1625190007
+      logo revisi@4x-8_10: -1446428368
+      logo revisi@4x-8_11: 1114053973
+      logo revisi@4x-8_12: 1078338437
+      logo revisi@4x-8_13: -594393238
+      logo revisi@4x-8_14: 1616782837
+      logo revisi@4x-8_15: -653724165
+      logo revisi@4x-8_16: -839309404
+      logo revisi@4x-8_17: 1940794437
+      logo revisi@4x-8_18: 1599848491
+      logo revisi@4x-8_19: 1108164959
+      logo revisi@4x-8_2: 986320547
+      logo revisi@4x-8_20: -1519823557
+      logo revisi@4x-8_21: 1980414565
+      logo revisi@4x-8_22: 1168172242
+      logo revisi@4x-8_23: 897009328
+      logo revisi@4x-8_24: 367151115
+      logo revisi@4x-8_25: -138194718
+      logo revisi@4x-8_26: 485027778
+      logo revisi@4x-8_27: 1577470881
+      logo revisi@4x-8_28: -1902434697
+      logo revisi@4x-8_29: -1032278400
+      logo revisi@4x-8_3: 1978211159
+      logo revisi@4x-8_30: -263587886
+      logo revisi@4x-8_31: 2042704389
+      logo revisi@4x-8_32: -810188825
+      logo revisi@4x-8_33: 1990591296
+      logo revisi@4x-8_34: 2039915052
+      logo revisi@4x-8_35: -846148738
+      logo revisi@4x-8_36: 2069626
+      logo revisi@4x-8_37: -2124261978
+      logo revisi@4x-8_38: 565908546
+      logo revisi@4x-8_39: -200794647
+      logo revisi@4x-8_4: -789147679
+      logo revisi@4x-8_40: 1485868747
+      logo revisi@4x-8_41: 1413934758
+      logo revisi@4x-8_42: 1246680958
+      logo revisi@4x-8_43: 1717916610
+      logo revisi@4x-8_44: -1540088126
+      logo revisi@4x-8_45: 20476981
+      logo revisi@4x-8_46: -1998922661
+      logo revisi@4x-8_47: -2108092121
+      logo revisi@4x-8_48: -1742632254
+      logo revisi@4x-8_49: 1990618681
+      logo revisi@4x-8_5: 1288754973
+      logo revisi@4x-8_50: -670967927
+      logo revisi@4x-8_51: 1342000856
+      logo revisi@4x-8_52: -2108966776
+      logo revisi@4x-8_53: 295274413
+      logo revisi@4x-8_54: 1500338887
+      logo revisi@4x-8_55: 574058750
+      logo revisi@4x-8_56: 172275401
+      logo revisi@4x-8_57: 377461421
+      logo revisi@4x-8_58: 1849576599
+      logo revisi@4x-8_59: 1238906458
+      logo revisi@4x-8_6: -541030747
+      logo revisi@4x-8_60: -2114845019
+      logo revisi@4x-8_61: 1574875289
+      logo revisi@4x-8_62: -1316964105
+      logo revisi@4x-8_63: 1747970813
+      logo revisi@4x-8_64: -2088473756
+      logo revisi@4x-8_65: -1029540628
+      logo revisi@4x-8_66: -1644759757
+      logo revisi@4x-8_67: 1594001361
+      logo revisi@4x-8_68: 1440581582
+      logo revisi@4x-8_69: -1998168949
+      logo revisi@4x-8_7: -381987071
+      logo revisi@4x-8_70: -193184166
+      logo revisi@4x-8_71: -1550499791
+      logo revisi@4x-8_72: 1781600816
+      logo revisi@4x-8_73: -909258605
+      logo revisi@4x-8_8: -1851819667
+      logo revisi@4x-8_9: 1474402114
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
