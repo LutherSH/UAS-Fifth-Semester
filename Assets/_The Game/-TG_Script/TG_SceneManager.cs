@@ -6,12 +6,13 @@ using UnityEngine.EventSystems;
 
 public class SceneManagerTG : MonoBehaviour
 {
-    public string sceneName;
+    //public string sceneName;
     public GameObject gameOverScreen;
     public GameObject winScreen;
     public GameObject playerTrue;
     private float delayGameOver = 0.03f;
     private int sceneNummer;
+    [HideInInspector] public bool playerIsDead = false;
     public InteractionController interactionController;
     //////////////////////////////////////////////////////////
 
@@ -26,6 +27,7 @@ public class SceneManagerTG : MonoBehaviour
     void Awake()
     {
         RestartIC();
+        playerIsDead = false;
     }
     void Update()
     {
@@ -38,7 +40,7 @@ public class SceneManagerTG : MonoBehaviour
     //////////////////////////////////////////////////////////
     public void LoadScene()
     {
-        SceneManager.LoadScene(sceneName);
+        //SceneManager.LoadScene(sceneName);
     }
 
     public void TemporaryGameWin()
@@ -67,6 +69,7 @@ public class SceneManagerTG : MonoBehaviour
     }
     public void ShowGameOver()
     {
+        playerIsDead = true;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         //gameOverScreen.SetActive(true);
@@ -83,7 +86,7 @@ public class SceneManagerTG : MonoBehaviour
         Time.timeScale = 1f;
     }
 
-    private void RestartIC()
+    public void RestartIC()
     {
         StartCoroutine(ResetIC());
     }

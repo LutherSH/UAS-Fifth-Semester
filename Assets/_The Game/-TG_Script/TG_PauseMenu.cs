@@ -1,4 +1,5 @@
 using System.Xml.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -6,11 +7,8 @@ using UnityEngine.UI;
 public class PauseMenuTG : MonoBehaviour
 {
     public static bool GameIsPaused = false;
-    public string sceneName;
     public bool isGamePaused;
-    //public GameObject thePlayer;
-    //public PlayerController playerController;
-
+    public SceneManagerTG tG_SceneManager;
     public GameObject pauseMenuUI;
     public Button pauseButton;
     public GameObject player;
@@ -25,9 +23,9 @@ public class PauseMenuTG : MonoBehaviour
         isGamePaused = GameIsPaused;
     }
 
-    private void start()
+    private void Awake()
     {
-
+        //SceneManagerTG.GetComponent<>();
     }
     void Update()
     {
@@ -39,30 +37,32 @@ public class PauseMenuTG : MonoBehaviour
 
     public void TogglePause()
     {
-        if (GameIsPaused)
+        if(!tG_SceneManager.playerIsDead)
         {
-            Resume();
-            Cursor.visible = true;
-            //thePlayer.SetActive(true);
-            
-
+            if (GameIsPaused)
+            {
+                Resume();
+                Cursor.visible = true;
+                player.SetActive(true);
+            }
+            else
+            {
+               Pause();
+               Cursor.visible = false;
+               player.SetActive(false);
+           }            
         }
-        else
-        {
-            Pause();
-            Cursor.visible = false;
-            //thePlayer.SetActive(false);
-            
-
-        }
+        
     }
 
     public void Resume()
     {
         //Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;
-        player.SetActive(true);
+        //player.SetActive(true);
         //playerController.enabled = true;
+        tG_SceneManager.RestartIC();
+        
 
         if (pauseMenuUI != null)
         {
@@ -75,7 +75,7 @@ public class PauseMenuTG : MonoBehaviour
     public void Pause()
     {
         Cursor.lockState = CursorLockMode.None;
-        player.SetActive(false);
+        //player.SetActive(false);
         //playerController.enabled = false;
 
         if (pauseMenuUI != null)
@@ -86,18 +86,18 @@ public class PauseMenuTG : MonoBehaviour
         GameIsPaused = true;
     }
 
-    public void LoadScene()
-    {
-        if (!string.IsNullOrEmpty(sceneName))
-        {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene(sceneName);
-        }
-        else
-        {
-            Debug.LogWarning("Scene name is empty! Assign a scene name in the Inspector.");
-        }
-    }
+    // public void LoadScene()
+    // {
+    //     if (!string.IsNullOrEmpty(sceneName))
+    //     {
+    //         Time.timeScale = 1f;
+    //         SceneManager.LoadScene(sceneName);
+    //     }
+    //     else
+    //     {
+    //         Debug.LogWarning("Scene name is empty! Assign a scene name in the Inspector.");
+    //     }
+    // }
 
     public void QuitGame()
     {
