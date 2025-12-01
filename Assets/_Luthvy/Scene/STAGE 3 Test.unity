@@ -2349,11 +2349,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba6f8f44bf1106c49ab2ded180ef9f56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
   gameOverScreen: {fileID: 1110075183}
   winScreen: {fileID: 952702530}
-  playerTrue: {fileID: 0}
-  interactionController: {fileID: 0}
+  playerTrue: {fileID: 424025288}
+  playerIsDead: 0
+  interactionController: {fileID: 7900195990627728328}
 --- !u!114 &225484201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,16 +2361,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225484198}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 571f1a51245bbd34e92b47d838314b25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: 
   isGamePaused: 0
-  pauseMenuUI: {fileID: 0}
+  tG_SceneManager: {fileID: 225484200}
+  pauseMenuUI: {fileID: 992331417}
   pauseButton: {fileID: 0}
-  player: {fileID: 0}
+  player: {fileID: 424025288}
 --- !u!1 &228578059
 GameObject:
   m_ObjectHideFlags: 0
@@ -10474,9 +10474,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 225484201}
         m_TargetAssemblyTypeName: PauseMenuTG, Assembly-CSharp
-        m_MethodName: Resume
+        m_MethodName: TogglePause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15011,7 +15011,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 225484200}
         m_TargetAssemblyTypeName: SceneManagerTG, Assembly-CSharp
         m_MethodName: MainMenu
         m_Mode: 1
@@ -21614,6 +21614,17 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1257078985}
   m_SourcePrefab: {fileID: 100100000, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+--- !u!114 &7900195990627728328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6405381945591202178, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+  m_PrefabInstance: {fileID: 7900195990627728327}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45cf42edd98ec414a9c445060afa6f35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8338523229693615137 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6729497031451546555, guid: a6f1741d1417d044593bbbaad7797e35, type: 3}

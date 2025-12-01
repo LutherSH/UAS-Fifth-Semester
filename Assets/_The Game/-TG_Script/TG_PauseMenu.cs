@@ -55,7 +55,7 @@ public class PauseMenuTG : MonoBehaviour
         
     }
 
-    public void Resume()
+    private void Resume()
     {
         //Cursor.lockState = CursorLockMode.None;
         Cursor.visible = false;

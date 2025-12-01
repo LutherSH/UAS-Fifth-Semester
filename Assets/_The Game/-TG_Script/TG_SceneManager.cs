@@ -11,7 +11,7 @@ public class SceneManagerTG : MonoBehaviour
     public GameObject winScreen;
     public GameObject playerTrue;
     private float delayGameOver = 0.03f;
-    private int sceneNummer;
+    //private int sceneNummer;
     [HideInInspector] public bool playerIsDead = false;
     public InteractionController interactionController;
     //////////////////////////////////////////////////////////
@@ -54,12 +54,14 @@ public class SceneManagerTG : MonoBehaviour
     public void Gameplay()
     {
         SceneManager.LoadScene(1);
-        sceneNummer = 1;
+        //sceneNummer = 1;
     }
 
     public void NextStage()
     {
-        SceneManager.LoadScene(sceneNummer);
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextIndex = currentIndex + 1;
+        SceneManager.LoadScene(nextIndex);
     }
     public void MainMenu()
     {
