@@ -145,7 +145,7 @@ public class SurfaceSwimmingMovement : MovementType
         {
             float wantedYPos = getWaterLevel();
             float dif = transform.position.y - wantedYPos;
-            Debug.Log(dif);
+            //Debug.Log(dif);
             if (playerStatus != changeTo) //If we are not swimming
             {
                 bool swim = (dif <= 0.1f && movement.controller.velocity.y <= 0); //Check to see if we can swim down

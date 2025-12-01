@@ -7,6 +7,8 @@ TagManager:
   - WeaponHolder
   - Wall
   - Enemy
+  - Footsteps/GRASS
+  - Footsteps/WATER
   layers:
   - Default
   - TransparentFX

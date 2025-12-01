@@ -13947,6 +13947,8 @@ GameObject:
   - component: {fileID: 8843103340242539137}
   - component: {fileID: 152778089114311668}
   - component: {fileID: 6992320171514531484}
+  - component: {fileID: 7207269617811844565}
+  - component: {fileID: 460407218165064017}
   m_Layer: 31
   m_Name: ShooterPlayer
   m_TagString: Player
@@ -14028,6 +14030,15 @@ MonoBehaviour:
   sprintTime: 6
   sprintReserve: 4
   sprintMinimum: 2
+  playerCamera: {fileID: 0}
+  baseStepSpeed: 0.5
+  crouchStepMultiplier: 1.5
+  sprintStepMultiplier: 0.6
+  footstepAudioSource: {fileID: 0}
+  grassClips:
+  - {fileID: 8300000, guid: f110a3c80633d804982a8eb647405f0e, type: 3}
+  waterClips:
+  - {fileID: 8300000, guid: d71d1210a978db446b99c67215d2d4c2, type: 3}
 --- !u!114 &5886763373021683885
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14141,6 +14152,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   cameraMovement: {fileID: 0}
+  swimSpeed: 6
   waterHelpers: []
 --- !u!114 &8843103340242539137
 MonoBehaviour:
@@ -14195,6 +14207,119 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65849298bdb76a498fa94e056fcb0dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7207269617811844565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903913136009623148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94582e1ebff5a1d4bbe451354ba44458, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _healthBar: {fileID: 0}
+  audioSource: {fileID: 0}
+  healSound: {fileID: 0}
+  sceneManager: {fileID: 0}
+  isDead: 0
+--- !u!82 &460407218165064017
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1903913136009623148}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &1934045869491160416
 GameObject:
   m_ObjectHideFlags: 0
@@ -33526,7 +33651,7 @@ MonoBehaviour:
   trailLayer: Overlay
   bulletPools:
   - pooledObj: {fileID: 7199593765887417660, guid: bbda026f2e1dd844db5e4c35e4a3ce91, type: 3}
-  - pooledObj: {fileID: 5693533556876234848, guid: 35c7bfbfc02df144ea8f26887b1a8cd3, type: 3}
+  - pooledObj: {fileID: 0}
   impactPools:
   - pooledObj: {fileID: 6079873397598027568, guid: 9041338dab4da3a4fba0850f079e015e, type: 3}
   - pooledObj: {fileID: 1689167387658942098, guid: d484b10926774e946a6d63b9500cecf9, type: 3}
