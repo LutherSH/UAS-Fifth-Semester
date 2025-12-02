@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: PM3
   m_EditorClassIdentifier: 
   prefabName: PM3
-  prefabObj: {fileID: 7233750441829212471, guid: 20eb96f5b6fa95243af3cc667ad29703, type: 3}
+  prefabObj: {fileID: 4656829750206439305, guid: 20eb96f5b6fa95243af3cc667ad29703, type: 3}
   prefabLocalData:
-    position: {x: -0.147, y: 0.028, z: -0.449}
+    position: {x: -0.146, y: 0.01, z: -0.437}
     eulerAngles: {x: 0, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   IK_HandTarget:
@@ -44,8 +44,8 @@ MonoBehaviour:
   aimFOV: 45
   aimDownSpeed: 12
   ironSightAim:
-    position: {x: 0, y: 0, z: 0}
-    eulerAngles: {x: 0, y: 0, z: 0}
+    position: {x: -0.177, y: 0.108, z: -0.25}
+    eulerAngles: {x: 359, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   bulletDamage: 12
   headshotMult: 1.25

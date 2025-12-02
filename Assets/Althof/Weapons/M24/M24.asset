@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: M24
   m_EditorClassIdentifier: 
   prefabName: M24
-  prefabObj: {fileID: 3306888725826626312, guid: 2ce3c52e61ed8a84c89b68e8d67305e1, type: 3}
+  prefabObj: {fileID: 1455471996933113028, guid: 2ce3c52e61ed8a84c89b68e8d67305e1, type: 3}
   prefabLocalData:
-    position: {x: 0, y: 0, z: 0}
+    position: {x: -0.174, y: 0.035, z: -0.43}
     eulerAngles: {x: -0, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   IK_HandTarget:
@@ -44,7 +44,7 @@ MonoBehaviour:
   aimFOV: 45
   aimDownSpeed: 6
   ironSightAim:
-    position: {x: -0.175, y: 0.13, z: -0.285}
+    position: {x: 0, y: 0.13, z: -0.285}
     eulerAngles: {x: 0, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   bulletDamage: 80
