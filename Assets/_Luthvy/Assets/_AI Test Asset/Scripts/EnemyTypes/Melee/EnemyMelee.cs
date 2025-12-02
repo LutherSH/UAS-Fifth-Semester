@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 
-public class EnemyMelee : MonoBehaviour
+public class EnemyMelee : MonoBehaviour, ISpookable
 {
     private TheStateMelee currentState;
     public Collider hitCollider;
@@ -72,6 +72,7 @@ public class EnemyMelee : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
         //eMAnimator = GetComponent<Animator>();
 
         weaponCollider.enabled = false;
@@ -166,7 +167,7 @@ public class EnemyMelee : MonoBehaviour
 
     public void Spooked()
     {
-        fov = 359f;
+        fov = 720f;
 
         if (!playerInSightRange)
         {
@@ -185,12 +186,18 @@ public class EnemyMelee : MonoBehaviour
     {
         if (weaponCollider != null)
             weaponCollider.enabled = true;
+            PlayAttackSound();
     }
 
     public void EndAttackWindow()
     {
         if (weaponCollider != null)
             weaponCollider.enabled = false;
+    }
+
+    public void PlayAttackSound()
+    {
+        audioSource.PlayOneShot(shootClip);
     }
     ///////////////////////////////////////////////////////////////////////
     /// DRAW GIZMIOZ

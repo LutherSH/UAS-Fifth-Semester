@@ -11,6 +11,7 @@ public class BaseEnemyEvent : MonoBehaviour
     public string enemyTag = "Enemy";
     public bool triggerOnce = true;
     public bool lastEvent;
+    public bool dialogTrigger = false;
     private GameObject theEventGameobject;
     public GameObject NoGoingBackBarrier;
 
@@ -34,6 +35,7 @@ public class BaseEnemyEvent : MonoBehaviour
     [Header("Event Callbacks")]
     [Tooltip("Triggered only if 'lastEvent' is checked.")]
     [SerializeField] private UnityEvent onLastEventTriggered;
+    [SerializeField] private UnityEvent forDialogOnly;
 
 /////////////////////////////////////////////////////////////////////
 /// INTERNAL STATE
@@ -52,6 +54,7 @@ public class BaseEnemyEvent : MonoBehaviour
 
         if (activateNextEvent != null)
             activateNextEvent.SetActive(false);
+
 
         // FIND ENEMIES INSIDE AREA
         Collider[] hits = Physics.OverlapBox(transform.position, transform.localScale / 2, Quaternion.identity);
@@ -97,7 +100,7 @@ public class BaseEnemyEvent : MonoBehaviour
         // If last event → trigger UnityEvent
         if (lastEvent && triggered)
         {
-            Debug.Log($"[{name}] Final event completed triggering UnityEvent");
+            //Debug.Log($"[{name}] Final event completed triggering UnityEvent");
             onLastEventTriggered?.Invoke();
         }
     }
@@ -111,14 +114,19 @@ public class BaseEnemyEvent : MonoBehaviour
         if (barrierObject != null)
             barrierObject.SetActive(false);
 
-        // Deactivate this event area
-        theEventGameobject.SetActive(false);
-
         // Notify Objective Manager
         if (objectiveManager != null)
         {
             objectiveManager.OnObjectiveCompleted(objectiveID);
         }
+
+        if (dialogTrigger)
+        {
+            forDialogOnly?.Invoke();
+        }
+        
+        // Deactivate this event area
+        theEventGameobject.SetActive(false);
     }
     
 /////////////////////////////////////////////////////////////////////
@@ -128,6 +136,7 @@ public class BaseEnemyEvent : MonoBehaviour
         if (other.CompareTag("Player") && objectiveManager != null)
         {
             objectiveManager.SetActiveObjective(this);
+            //SpookAllEnemies();
 
             if (NoGoingBackBarrier !=null)
             {
@@ -142,6 +151,22 @@ public class BaseEnemyEvent : MonoBehaviour
         {
             objectiveManager.ClearObjective(this);
         }
+    }
+
+    public void SpookAllEnemies()
+    {
+        foreach (GameObject enemyObj in enemiesInArea)
+        {
+            if (enemyObj == null) continue;
+
+            ISpookable spookable = enemyObj.GetComponent<ISpookable>();
+            if (spookable != null)
+            {
+                spookable.Spooked();
+            }
+        }
+
+        Debug.LogWarning($"[{name}] All enemies inside event area have been SPOOKED.");
     }
 
 /////////////////////////////////////////////////////////////////////

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 
-public class EnemyBow : MonoBehaviour
+public class EnemyBow : MonoBehaviour , ISpookable
 {
     private TheStateBow currentState;
     public Collider hitCollider;
@@ -77,6 +77,7 @@ public class EnemyBow : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
         //eAanimation = GetComponent<Animator>();
     }
 
@@ -168,7 +169,8 @@ public class EnemyBow : MonoBehaviour
 
     public void Spooked()
     {
-        fov = 359f;
+        fov = 720f;
+        sightRange = sightRange + 20;
 
         if (!playerInSightRange)
         {

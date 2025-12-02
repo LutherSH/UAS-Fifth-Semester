@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Rendering;
 
-public class EnemyGun : MonoBehaviour
+public class EnemyGun : MonoBehaviour , ISpookable
 {
     private TheStateGun currentState;
     public PlayerBehaviour playerBehaviour;
@@ -79,6 +79,7 @@ public class EnemyGun : MonoBehaviour
         player = GameObject.Find("PlayerTrue").transform;
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
+        audioSource = GetComponent<AudioSource>();
         //eGAnimation = GetComponent<Animator>();
     }
 
@@ -170,7 +171,7 @@ public class EnemyGun : MonoBehaviour
     }
     public void Spooked()
     {
-        fov = 359f;
+        fov = 720f;
 
         if (!playerInSightRange)
         {

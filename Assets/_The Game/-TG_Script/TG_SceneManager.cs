@@ -21,12 +21,12 @@ public class SceneManagerTG : MonoBehaviour
         gameOverScreen.SetActive(false);
         Time.timeScale = 1f;
         playerTrue = GameObject.Find("PlayerTrue");
-        RestartIC();
+        if (interactionController != null) RestartIC();
     }
 
     void Awake()
     {
-        RestartIC();
+        if (interactionController != null) RestartIC();
         playerIsDead = false;
     }
     void Update()

@@ -39,6 +39,7 @@ public void Update()
         if(enemy.allowShoot)
         {
             FireGun();
+            enemy.audioSource.PlayOneShot(enemy.shootClip);
             enemy.nextFireTime = Time.time + enemy.fireCooldown; 
             enemy.SwitchState(new IdleStateSniper(enemy));
         }

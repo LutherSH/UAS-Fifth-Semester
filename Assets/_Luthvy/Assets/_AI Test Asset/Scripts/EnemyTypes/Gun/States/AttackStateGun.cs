@@ -38,6 +38,7 @@ public void Update()
     if (enemy.playerInAttackRange && Time.time >= enemy.nextFireTime && enemy.playerInSightRange && enemy.allowShoot)
     {
         FireGun();
+        enemy.audioSource.PlayOneShot(enemy.shootClip);
         enemy.nextFireTime = Time.time + enemy.fireCooldown;
     }
 

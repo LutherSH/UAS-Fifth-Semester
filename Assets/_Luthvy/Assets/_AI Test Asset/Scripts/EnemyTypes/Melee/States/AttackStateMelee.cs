@@ -61,15 +61,6 @@ public class AttackStateMelee : TheStateMelee
         }
     }
 
-    public void PlayShootSound()
-    {
-        if (enemy.audioSource != null && enemy.shootClip != null)
-        {
-            enemy.audioSource.PlayOneShot(enemy.shootClip);
-        }
-    }
-
-
     ///////////////////////////////////////////////////////////////////////
     /// STATE EXIT
     public void Exit()
