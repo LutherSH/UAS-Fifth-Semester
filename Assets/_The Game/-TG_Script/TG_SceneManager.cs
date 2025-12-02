@@ -65,7 +65,7 @@ public class SceneManagerTG : MonoBehaviour
     }
     public void MainMenu()
     {
-        SceneManager.LoadScene("G_MainMenu");
+        SceneManager.LoadScene(0);
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;   
     }

@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_The Game/-TG_Scene/G_MainMenu2.unity
-    guid: bc75f359802eeb74c9312d6b7106beee
+    path: Assets/_The Game/-TG_Scene/G_Main Menu.unity
+    guid: 0484ebd29ffafd847824b3beb26935fa
   - enabled: 1
     path: Assets/_Luthvy/Scene/STAGE 1 Test.unity
     guid: ffda1b2d033bcfb48bc8cdc5dbb1c576
