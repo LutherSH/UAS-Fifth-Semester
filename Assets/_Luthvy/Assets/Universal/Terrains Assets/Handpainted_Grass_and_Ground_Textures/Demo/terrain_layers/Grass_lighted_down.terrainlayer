@@ -7,10 +7,10 @@ TerrainLayer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Grass_lighted_down
-  m_DiffuseTexture: {fileID: 2800000, guid: 6e3abed3edda0ae4b876a53ee95f7d37, type: 3}
-  m_NormalMapTexture: {fileID: 0}
+  m_DiffuseTexture: {fileID: 2800000, guid: 7d4855f1fa20b32468cdf3a509422c05, type: 3}
+  m_NormalMapTexture: {fileID: 2800000, guid: 55eda94b004776843bf8a788f4de3e78, type: 3}
   m_MaskMapTexture: {fileID: 0}
-  m_TileSize: {x: 26.15, y: 22.1}
+  m_TileSize: {x: 10, y: 5}
   m_TileOffset: {x: 18.3, y: 3.05}
   m_Specular: {r: 0, g: 0, b: 0, a: 0}
   m_Metallic: 0

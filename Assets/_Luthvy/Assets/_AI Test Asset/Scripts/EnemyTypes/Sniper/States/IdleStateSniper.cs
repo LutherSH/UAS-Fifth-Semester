@@ -65,7 +65,7 @@ public class IdleStateSniper : TheStateSniper
                 //}
                 idleTimer += Time.deltaTime;
 
-                Debug.LogWarning(idleTimer);
+                //Debug.LogWarning(idleTimer);
 
                 if (idleTimer >= reactionDelay)
                 {

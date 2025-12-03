@@ -168,11 +168,12 @@ public class EnemyMelee : MonoBehaviour, ISpookable
     public void Spooked()
     {
         fov = 720f;
+        sightRange = sightRange + 10;
 
-        if (!playerInSightRange)
-        {
+        //if (!playerInSightRange)
+        //{
             isSpooked = true;
-        }
+        //}
     }
 
     public void Despawn()

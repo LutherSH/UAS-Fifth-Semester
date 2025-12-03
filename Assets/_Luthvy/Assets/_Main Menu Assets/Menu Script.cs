@@ -9,7 +9,7 @@ public class MenuScript : MonoBehaviour
     private Animator animator;
     private GameObject lightMe;
     private GameObject rawIMG;
-    private bool itsOn = false;
+    //private bool itsOn = false;
     void Awake()
     {
         animator = GetComponent<Animator>();

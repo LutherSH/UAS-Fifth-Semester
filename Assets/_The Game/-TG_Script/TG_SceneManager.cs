@@ -75,7 +75,8 @@ public class SceneManagerTG : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
         //gameOverScreen.SetActive(true);
-        playerTrue.SetActive(false);
+        //playerTrue.SetActive(false);
+        interactionController.enabled = false;
         EnsureEventSystem();
         StartCoroutine(DelayDeath());
     }
@@ -102,8 +103,13 @@ public class SceneManagerTG : MonoBehaviour
     {
         yield return new WaitForSeconds(delayGameOver);
         gameOverScreen.SetActive(true);
-        playerTrue.SetActive(true);
-        //InteractionController
+        //playerTrue.SetActive(false);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        //playerTrue.SetActive(true);
+        yield return new WaitForSeconds(delayGameOver * 4);
+        interactionController.enabled = true;
+        playerTrue.SetActive(false);
         Time.timeScale = 0f;
     }
 
