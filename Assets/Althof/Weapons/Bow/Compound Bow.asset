@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Compound Bow
   m_EditorClassIdentifier: 
   prefabName: Compound Bow
-  prefabObj: {fileID: 3015640648790334656, guid: 63bb2b9ff7901554cab97e4c2dc4aa8e, type: 3}
+  prefabObj: {fileID: 6661248732181668712, guid: 63bb2b9ff7901554cab97e4c2dc4aa8e, type: 3}
   prefabLocalData:
     position: {x: -0.225, y: 0.012, z: -0.38}
     eulerAngles: {x: -0, y: 0, z: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
     reload: Bow_reload
     putAway: Bow_putAway
     takeOut: Bow_takeOut
-  gunIcon: {fileID: 0}
+  gunIcon: {fileID: 21300000, guid: ab9253dcae1c8564dbe587eadb7b4a45, type: 3}
   ammoOffsetX: 180
   shootClips: []
   reloadSFX: {fileID: 0}

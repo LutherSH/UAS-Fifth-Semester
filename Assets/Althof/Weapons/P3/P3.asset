@@ -133,7 +133,7 @@ MonoBehaviour:
     reload: P3_reload
     putAway: P3_putAway
     takeOut: P3_takeOut
-  gunIcon: {fileID: 2258435179232560843, guid: 36987911bc800964ebe5a82bae41c9a9, type: 3}
+  gunIcon: {fileID: 21300000, guid: 2ed4fba159d086447bdcdca284dcfafb, type: 3}
   ammoOffsetX: 96
   shootClips:
   - {fileID: 8300000, guid: f110a3c80633d804982a8eb647405f0e, type: 3}
