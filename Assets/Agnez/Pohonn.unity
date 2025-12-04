@@ -122,65 +122,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1001 &107151726
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -16.93
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 9.76
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 43.52
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-      propertyPath: m_Name
-      value: Tembesu.T
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 65702495048144492, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-    - {fileID: -8700617353114198275, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 03f3688824c6d2348afc61cd732ab82b, type: 3}
 --- !u!1 &123978417
 GameObject:
   m_ObjectHideFlags: 0
@@ -874,6 +815,71 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 59633157833b87f438f0226a1fee8657, type: 3}
+--- !u!1001 &1738847493
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -19.613136
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 9.416416
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 42.97
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: beee79c79f009fb45903f80ec2436210, type: 2}
+    - target: {fileID: -7511558181221131132, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dbf42a929d4a0a54c965f10b51655965, type: 2}
+    - target: {fileID: 919132149155446097, guid: c09575d8f87736d4b9667ac153713857, type: 3}
+      propertyPath: m_Name
+      value: Tembesu
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c09575d8f87736d4b9667ac153713857, type: 3}
 --- !u!1 &1784285260
 GameObject:
   m_ObjectHideFlags: 0
@@ -1117,7 +1123,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 1784285263}
   - {fileID: 1045223137}
-  - {fileID: 107151726}
   - {fileID: 1430719655}
   - {fileID: 204967686}
   - {fileID: 1022292605}
@@ -1126,3 +1131,4 @@ SceneRoots:
   - {fileID: 1597198101}
   - {fileID: 1304423626}
   - {fileID: 170645306}
+  - {fileID: 1738847493}

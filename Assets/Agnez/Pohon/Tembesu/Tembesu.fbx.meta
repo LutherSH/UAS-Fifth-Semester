@@ -1,19 +1,9 @@
 fileFormatVersion: 2
-guid: 03f3688824c6d2348afc61cd732ab82b
+guid: c09575d8f87736d4b9667ac153713857
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: batang
-    second: {fileID: 2100000, guid: beee79c79f009fb45903f80ec2436210, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: daun
-    second: {fileID: 2100000, guid: dbf42a929d4a0a54c965f10b51655965, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
