@@ -7,7 +7,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] HealthBar _healthBar;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip healSound;
-    //[SerializeField] private AudioClip hurtSound;
+    [SerializeField] private AudioClip hurtSound;
     public SceneManagerTG sceneManager;
     public bool isDead;
 
@@ -46,10 +46,10 @@ public class PlayerBehaviour : MonoBehaviour
         GameManager.gameManager._playerHealth.DmgUnit(dmg);
         _healthBar.SetHealth(GameManager.gameManager._playerHealth.Health);
 
-        // if (hurtSound != null && audioSource != null)
-        // {
-        //     audioSource.PlayOneShot(hurtSound);
-        // }
+        if (hurtSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(hurtSound);
+        }
     }
 
     public void PlayerHeal(int healing)
