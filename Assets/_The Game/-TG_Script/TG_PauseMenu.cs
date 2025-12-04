@@ -26,6 +26,7 @@ public class PauseMenuTG : MonoBehaviour
     private void Awake()
     {
         //SceneManagerTG.GetComponent<>();
+        player = GameObject.Find("PlayerTrue");
     }
     void Update()
     {
