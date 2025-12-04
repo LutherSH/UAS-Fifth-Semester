@@ -295,8 +295,8 @@ QualitySettings:
     terrainDetailDensityScale: 1
     terrainBasemapDistance: 1000
     terrainDetailDistance: 80
-    terrainTreeDistance: 502
-    terrainBillboardStart: 148
+    terrainTreeDistance: 1363
+    terrainBillboardStart: 559
     terrainFadeLength: 5
     terrainMaxTrees: 0
     excludedTargetPlatforms: []
