@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Compound Bow
   m_EditorClassIdentifier: 
   prefabName: Compound Bow
-  prefabObj: {fileID: 6661248732181668712, guid: 63bb2b9ff7901554cab97e4c2dc4aa8e, type: 3}
+  prefabObj: {fileID: 4801156588247326815, guid: 63bb2b9ff7901554cab97e4c2dc4aa8e, type: 3}
   prefabLocalData:
-    position: {x: -0.225, y: 0.012, z: -0.38}
+    position: {x: -0.225, y: 0.012, z: -0.43}
     eulerAngles: {x: -0, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   IK_HandTarget:
@@ -197,11 +197,11 @@ MonoBehaviour:
         m_RotationOrder: 4
       multiplier: 1
     randomizeRecoil: 0
-  animationController: {fileID: 9100000, guid: 18cc95ddcb463904896b744d3187a46e, type: 2}
+  animationController: {fileID: 9100000, guid: c8bb5eeccf0340446abbeef6da187cd1, type: 2}
   gunMotions:
     idle: Bow_idle
-    hipfireShoot: Bow_idle
-    aimedShoot: Bow_idle
+    hipfireShoot: Bow_shoot
+    aimedShoot: Bow_shoot
     reload: Bow_reload
     putAway: Bow_putAway
     takeOut: Bow_takeOut

@@ -15,7 +15,7 @@ MonoBehaviour:
   prefabName: Bayonet
   prefabObj: {fileID: 6602887494495263436, guid: f6d5a25962afa0d49a54af8cb9348b65, type: 3}
   prefabLocalData:
-    position: {x: -0.177, y: 0.089, z: -0.518}
+    position: {x: -0.177, y: 0.089, z: -0.57}
     eulerAngles: {x: 0, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   IK_HandTarget:
