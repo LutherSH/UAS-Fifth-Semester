@@ -71,6 +71,7 @@ public class EnemyGun : MonoBehaviour , ISpookable
     [Header("Audio Settings")]
     public AudioSource audioSource;
     public AudioClip shootClip;
+
     ///////////////////////////////////////////////////////////////////////
     /// START
 
@@ -80,6 +81,8 @@ public class EnemyGun : MonoBehaviour , ISpookable
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
         audioSource = GetComponent<AudioSource>();
+        playerBehaviour = player.GetComponent<PlayerBehaviour>();
+        
         //eGAnimation = GetComponent<Animator>();
     }
 

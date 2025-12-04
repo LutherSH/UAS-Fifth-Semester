@@ -296,7 +296,7 @@ QualitySettings:
     terrainBasemapDistance: 1000
     terrainDetailDistance: 80
     terrainTreeDistance: 502
-    terrainBillboardStart: 250
+    terrainBillboardStart: 148
     terrainFadeLength: 5
     terrainMaxTrees: 0
     excludedTargetPlatforms: []

@@ -83,6 +83,7 @@ public class EnemySniper : MonoBehaviour
         hitCollider = GetComponent<Collider>();
         //eSAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
+        playerBehaviour = player.GetComponent<PlayerBehaviour>();
     }
 
     void Start()

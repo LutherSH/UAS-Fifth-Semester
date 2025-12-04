@@ -8,7 +8,13 @@ public class EnemyMeleeHitbox : MonoBehaviour
     public EnemyMelee enemy;
     public PlayerBehaviour playerBehaviour;
 
+    private GameObject thePlayer;
 
+    void Awake()
+    {
+        thePlayer = GameObject.Find("PlayerTrue");
+        playerBehaviour = thePlayer.GetComponent<PlayerBehaviour>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
