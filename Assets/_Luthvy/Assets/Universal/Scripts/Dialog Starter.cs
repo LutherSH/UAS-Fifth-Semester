@@ -13,6 +13,7 @@ public class DialogStarter : MonoBehaviour
     public bool isPlayed = false;
     public bool isTrigsOnce = false;
     public bool triggerUnityEvent;
+    public bool playImmedietly = false;
     // Start is called before the first frame update
     [SerializeField] private UnityEvent unityEvent;
     void Start()
@@ -38,6 +39,14 @@ public class DialogStarter : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        if(playImmedietly && !isPlayed)
+        {
+            ExecuteBlock();
+            isPlayed = true;
+        }
+    }
     public void ExecuteBlock()
     {
         flowchart.ExecuteBlock(blockName);

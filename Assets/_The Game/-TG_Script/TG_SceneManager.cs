@@ -77,14 +77,14 @@ public class SceneManagerTG : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         //gameOverScreen.SetActive(true);
         //playerTrue.SetActive(false);
-        interactionController.enabled = false;
+        if(interactionController !=null) interactionController.enabled = false;
         EnsureEventSystem();
         StartCoroutine(DelayDeath());
     }
 
     public void RetryGame()
     {
-        interactionController.enabled = false;
+        if(interactionController !=null) interactionController.enabled = false;
         //interactionController.enabled = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1f;
@@ -109,7 +109,7 @@ public class SceneManagerTG : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         //playerTrue.SetActive(true);
         yield return new WaitForSeconds(delayGameOver * 4);
-        interactionController.enabled = true;
+        if(interactionController !=null) interactionController.enabled = true;
         playerTrue.SetActive(false);
         Time.timeScale = 0f;
     }
@@ -121,7 +121,7 @@ public class SceneManagerTG : MonoBehaviour
         Debug.LogWarning("Ic off");
         yield return new WaitForSeconds(1);
         Debug.LogWarning("Ic on");
-        interactionController.enabled = true;
+        if(interactionController !=null) interactionController.enabled = true;
     }
 
     void EnsureEventSystem()
