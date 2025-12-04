@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Luthvy/Scene/STAGE 3 Test.unity
     guid: a648144a375d33a4bb4decc3232743f7
+  - enabled: 1
+    path: Assets/_Luthvy/Scene/STAGE FInal.unity
+    guid: 9c2587996a2ab134696f524fc0f26391
   m_configObjects: {}
