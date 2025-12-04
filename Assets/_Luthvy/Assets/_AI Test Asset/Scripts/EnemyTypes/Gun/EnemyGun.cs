@@ -81,7 +81,7 @@ public class EnemyGun : MonoBehaviour , ISpookable
         nAgent = GetComponent<NavMeshAgent>();
         hitCollider = GetComponent<Collider>();
         audioSource = GetComponent<AudioSource>();
-        playerBehaviour = player.GetComponent<PlayerBehaviour>();
+        playerBehaviour = player.GetComponentInChildren<PlayerBehaviour>();
         
         //eGAnimation = GetComponent<Animator>();
     }

@@ -27,7 +27,7 @@ public class SceneManagerTG : MonoBehaviour
     {
         if (interactionController != null) RestartIC();
         playerTrue = GameObject.Find("PlayerTrue");
-        interactionController = playerTrue.GetComponent<InteractionController>();
+        interactionController = playerTrue.GetComponentInChildren<InteractionController>();
         playerIsDead = false;
     }
     void Update()

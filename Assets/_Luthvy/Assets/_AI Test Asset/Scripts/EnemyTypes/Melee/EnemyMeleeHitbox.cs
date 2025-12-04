@@ -13,7 +13,7 @@ public class EnemyMeleeHitbox : MonoBehaviour
     void Awake()
     {
         thePlayer = GameObject.Find("PlayerTrue");
-        playerBehaviour = thePlayer.GetComponent<PlayerBehaviour>();
+        playerBehaviour = thePlayer.GetComponentInChildren<PlayerBehaviour>();
     }
     private void OnTriggerEnter(Collider other)
     {
