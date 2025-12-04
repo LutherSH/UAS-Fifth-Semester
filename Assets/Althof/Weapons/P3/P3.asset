@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: P3
   m_EditorClassIdentifier: 
   prefabName: P3
-  prefabObj: {fileID: 1515890074856854948, guid: d124c4f3af4f93b41ac9f8e6d7845183, type: 3}
+  prefabObj: {fileID: 9141188037023348174, guid: d124c4f3af4f93b41ac9f8e6d7845183, type: 3}
   prefabLocalData:
     position: {x: -0.177, y: 0.089, z: -0.518}
     eulerAngles: {x: -0, y: 0, z: 0}
@@ -44,7 +44,7 @@ MonoBehaviour:
   aimFOV: 60
   aimDownSpeed: 14
   ironSightAim:
-    position: {x: -0.175, y: 0.121, z: -0.195}
+    position: {x: -0.175, y: 0.095, z: -0.195}
     eulerAngles: {x: -1, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
   bulletDamage: 35
@@ -125,15 +125,15 @@ MonoBehaviour:
         m_RotationOrder: 4
       multiplier: 1
     randomizeRecoil: 0.1
-  animationController: {fileID: 9100000, guid: 4133f0019046f66428bbae7f1274e55e, type: 2}
+  animationController: {fileID: 9100000, guid: 06bbe81b9049fd44fbf127f4b06a243d, type: 2}
   gunMotions:
     idle: P3_idle
-    hipfireShoot: P3_shootHF
-    aimedShoot: P3_shootHF
+    hipfireShoot: P3_shoot
+    aimedShoot: P3_shoot
     reload: P3_reload
     putAway: P3_putAway
     takeOut: P3_takeOut
-  gunIcon: {fileID: 2258435179232560843, guid: 36987911bc800964ebe5a82bae41c9a9, type: 3}
+  gunIcon: {fileID: 21300000, guid: 2ed4fba159d086447bdcdca284dcfafb, type: 3}
   ammoOffsetX: 96
   shootClips:
   - {fileID: 8300000, guid: f110a3c80633d804982a8eb647405f0e, type: 3}
