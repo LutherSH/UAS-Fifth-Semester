@@ -16501,6 +16501,26 @@ PrefabInstance:
       propertyPath: sprintStepMultiplier
       value: 0.39
       objectReference: {fileID: 0}
+    - target: {fileID: 3295630802198736556, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+      propertyPath: grassClips.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3295630802198736556, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+      propertyPath: grassClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f26fae58819f27943922165456280c5a, type: 3}
+    - target: {fileID: 3295630802198736556, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+      propertyPath: grassClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 108461af985df2c4fbf11740c7bc1896, type: 3}
+    - target: {fileID: 3295630802198736556, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+      propertyPath: grassClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7be0967b23c8367499145e1cae330b70, type: 3}
+    - target: {fileID: 3295630802198736556, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
+      propertyPath: grassClips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d4b04da20b3e434ca7be47c8caa75d6, type: 3}
     - target: {fileID: 4176687037037668816, guid: e5a4fe043e59f45459a4d1f7bf5b6cbb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.081
