@@ -335,21 +335,21 @@ public class PlayerController : MonoBehaviour
 
         if (footstepTimer <= 0)
         {
-            if (Physics.Raycast(characterController.transform.position, Vector3.down, out RaycastHit hit, 3))
+            if (Physics.Raycast(characterController.transform.position, Vector3.down, out RaycastHit hit, 9))
             {
                 switch (hit.collider.tag)
                 {
                     case "Footsteps/GRASS":
                         footstepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
-                        Debug.Log("Grass sound played");
+                        //Debug.Log("Grass sound played");
                         break;
                     case "Footsteps/WATER":
                         footstepAudioSource.PlayOneShot(waterClips[UnityEngine.Random.Range(0, waterClips.Length - 1)]);
-                        Debug.Log("Water sound played");
+                        //Debug.Log("Water sound played");
                         break;
                     default:
                         footstepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
-                        Debug.Log("Default sound played");
+                        //Debug.Log("Default sound played");
                         break;
                 }
 
