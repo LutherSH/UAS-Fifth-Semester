@@ -12,6 +12,8 @@ public class PauseMenuTG : MonoBehaviour
     public GameObject pauseMenuUI;
     public Button pauseButton;
     public GameObject player;
+    //public GameObject playerMainCam;
+    //private Camera mainCamCom;
 
     void Start()
     {
@@ -27,6 +29,8 @@ public class PauseMenuTG : MonoBehaviour
     {
         //SceneManagerTG.GetComponent<>();
         player = GameObject.Find("PlayerTrue");
+        //playerMainCam = GameObject.Find("Main Camera");
+        //mainCamCom = playerMainCam.GetComponentInChildren<Camera>();
     }
     void Update()
     {
@@ -44,12 +48,14 @@ public class PauseMenuTG : MonoBehaviour
             {
                 Resume();
                 Cursor.visible = true;
+                //mainCamCom.enabled = true;
                 player.SetActive(true);
             }
             else
             {
                Pause();
                Cursor.visible = false;
+               //mainCamCom.enabled = false;
                player.SetActive(false);
            }            
         }

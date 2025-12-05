@@ -10,6 +10,8 @@ public class SceneManagerTG : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject winScreen;
     public GameObject playerTrue;
+    public GameObject playerMainCam;
+    private Camera mainCamCom;
     private float delayGameOver = 0.03f;
     //private int sceneNummer;
     [HideInInspector] public bool playerIsDead = false;
@@ -27,7 +29,9 @@ public class SceneManagerTG : MonoBehaviour
     {
         if (interactionController != null) RestartIC();
         playerTrue = GameObject.Find("PlayerTrue");
+        //playerMainCam = GameObject.Find("Main Camera");
         interactionController = playerTrue.GetComponentInChildren<InteractionController>();
+        //mainCamCom = playerMainCam.GetComponentInChildren<Camera>();
         playerIsDead = false;
     }
     void Update()
@@ -110,6 +114,7 @@ public class SceneManagerTG : MonoBehaviour
         //playerTrue.SetActive(true);
         yield return new WaitForSeconds(delayGameOver * 4);
         if(interactionController !=null) interactionController.enabled = true;
+        //mainCamCom.enabled = false;
         playerTrue.SetActive(false);
         Time.timeScale = 0f;
     }
