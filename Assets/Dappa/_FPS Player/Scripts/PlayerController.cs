@@ -48,6 +48,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float sprintStepMultiplier = 0.6f;
     [SerializeField] private AudioSource footstepAudioSource = default;
     [SerializeField] private AudioClip[] grassClips = default;
+    [SerializeField] private AudioClip[] woodClips = default;
     [SerializeField] private AudioClip[] waterClips = default;
     private float footstepTimer = 0;
     private float GetCurrentOffset => status == Status.crouching ? baseStepSpeed * crouchStepMultiplier : status == Status.sprinting ? baseStepSpeed * sprintStepMultiplier : baseStepSpeed;
@@ -342,6 +343,9 @@ public class PlayerController : MonoBehaviour
                     case "Footsteps/GRASS":
                         footstepAudioSource.PlayOneShot(grassClips[UnityEngine.Random.Range(0, grassClips.Length - 1)]);
                         //Debug.Log("Grass sound played");
+                        break;
+                    case "Footsteps/WOOD" :
+                        footstepAudioSource.PlayOneShot(woodClips[UnityEngine.Random.Range(0, woodClips.Length - 1)]);
                         break;
                     case "Footsteps/WATER":
                         footstepAudioSource.PlayOneShot(waterClips[UnityEngine.Random.Range(0, waterClips.Length - 1)]);

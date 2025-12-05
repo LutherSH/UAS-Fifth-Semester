@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Footsteps/GRASS
   - Footsteps/WATER
+  - Footsteps/WOOD
   layers:
   - Default
   - TransparentFX
