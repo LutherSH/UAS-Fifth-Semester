@@ -33,7 +33,7 @@ MonoBehaviour:
   burstShot: 3
   burstTime: 0.125
   ammoClip: 1
-  startingClips: 24
+  startingClips: 32
   firerate: 0.1
   fireDelay: 0.5
   fireCooldownSpeed: 2
@@ -47,10 +47,10 @@ MonoBehaviour:
     position: {x: -0.17, y: 0.152, z: -0.65}
     eulerAngles: {x: 0, y: 0, z: 0}
     scale: {x: 1, y: 1, z: 1}
-  bulletDamage: 40
-  headshotMult: 1.5
-  bulletRange: 100
-  bulletSpread: 0.15
+  bulletDamage: 50
+  headshotMult: 2
+  bulletRange: 200
+  bulletSpread: 0.0312
   aimSpreadMultiplier: 0
   aimDownMultiplier: 0.5
   cyclesInClip: 1
@@ -206,6 +206,6 @@ MonoBehaviour:
     putAway: Bow_putAway
     takeOut: Bow_takeOut
   gunIcon: {fileID: 21300000, guid: ab9253dcae1c8564dbe587eadb7b4a45, type: 3}
-  ammoOffsetX: 180
+  ammoOffsetX: 80
   shootClips: []
   reloadSFX: {fileID: 0}
