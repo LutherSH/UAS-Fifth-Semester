@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class AmbientSound : MonoBehaviour
 {
-    // Start is called before the first frame update
-
+/// ////////////////////////////////////////////////////////////////
+/// STUFF
     public AudioClip[] ambientClips;
     private AudioSource source;
     public float minDistance = 1f;
     public float maxDistance = 50f;
     public Color gizmoColours = new Color(0f, 0.5f, 1f, 0.25f);
+/// ////////////////////////////////////////////////////////////////
+/// START
     void Start()
     {
         source = GetComponent<AudioSource>();
@@ -19,7 +21,6 @@ public class AmbientSound : MonoBehaviour
         source.rolloffMode = AudioRolloffMode.Linear;
         source.minDistance = minDistance;
         source.maxDistance = maxDistance;
-
 
         if (ambientClips.Length > 0)
         {
@@ -30,6 +31,8 @@ public class AmbientSound : MonoBehaviour
         }
     }
     #if UNITY_EDITOR
+/// ////////////////////////////////////////////////////////////////
+/// GIZMO DRAW
     void OnDrawGizmosSelected()
     {
         Gizmos.color = gizmoColours;
@@ -38,5 +41,5 @@ public class AmbientSound : MonoBehaviour
         Gizmos.color = new Color(gizmoColours.r, gizmoColours.g, gizmoColours.b, 0.1f);
         Gizmos.DrawWireSphere(transform.position, maxDistance);
     }
-#endif
+    #endif
 }

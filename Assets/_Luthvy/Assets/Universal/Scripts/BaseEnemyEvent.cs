@@ -14,7 +14,7 @@ public class BaseEnemyEvent : MonoBehaviour
     public bool dialogTrigger = false;
     private GameObject theEventGameobject;
     public GameObject NoGoingBackBarrier;
-
+    
 /////////////////////////////////////////////////////////////////////
 /// OBJECTIVE INFO (For ObjectiveManager)
     [Header("Objective Info")]
