@@ -2926,7 +2926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4006392572536373538}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 166, y: -280.5, z: -938}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_ConstrainProportionsScale: 0
@@ -3002,6 +3002,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 0d1b6efbf464f0040941ab6069b8a9f2, type: 3}
   - {fileID: 8300000, guid: e9bdb013fc0257a42a6705174f6dcf37, type: 3}
   - {fileID: 8300000, guid: dac1abb52fb8f1142a8789178d5091bb, type: 3}
+  woodClips:
+  - {fileID: 8300000, guid: 1b0d4dd25a8b2b14ca3acb2c9df0dc5b, type: 3}
+  - {fileID: 8300000, guid: 0e0c4af12f4105c4bb76257a5062871f, type: 3}
+  - {fileID: 8300000, guid: d6f3d0fd5fb8d054d8ac8733588caba3, type: 3}
   waterClips: []
 --- !u!114 &6015268441553617978
 MonoBehaviour:

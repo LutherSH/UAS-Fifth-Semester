@@ -100,7 +100,7 @@ public class SceneManagerTG : MonoBehaviour
     }
     public void Quit()
     {
-        //Application.Quit();
+        Application.Quit();
         Debug.LogWarning("QUIT GAME");
     }
 
