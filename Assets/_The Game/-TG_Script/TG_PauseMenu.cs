@@ -47,14 +47,14 @@ public class PauseMenuTG : MonoBehaviour
             if (GameIsPaused)
             {
                 Resume();
-                Cursor.visible = true;
+                Cursor.visible = false;
                 //mainCamCom.enabled = true;
                 player.SetActive(true);
             }
             else
             {
                Pause();
-               Cursor.visible = false;
+               Cursor.visible = true;
                //mainCamCom.enabled = false;
                player.SetActive(false);
            }            
@@ -82,7 +82,7 @@ public class PauseMenuTG : MonoBehaviour
     public void Pause()
     {
         Cursor.lockState = CursorLockMode.None;
-        //player.SetActive(false);
+        player.SetActive(false);
         //playerController.enabled = false;
 
         if (pauseMenuUI != null)
