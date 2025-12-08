@@ -8,6 +8,7 @@ public class SceneManagerTG : MonoBehaviour
 {
     //public string sceneName;
     public GameObject gameOverScreen;
+    public bool endingPart = false;
     public GameObject winScreen;
     public GameObject playerTrue;
     public GameObject playerMainCam;
@@ -24,6 +25,7 @@ public class SceneManagerTG : MonoBehaviour
         gameOverScreen.SetActive(false);
         Time.timeScale = 1f;
         if (interactionController != null) RestartIC();
+        if (endingPart) ShowCursor();
     }
 
     void Awake()
@@ -31,7 +33,7 @@ public class SceneManagerTG : MonoBehaviour
         if (interactionController != null) RestartIC();
         playerTrue = GameObject.Find("PlayerTrue");
         //playerMainCam = GameObject.Find("Main Camera");
-        interactionController = playerTrue.GetComponentInChildren<InteractionController>();
+        if(!endingPart) interactionController = playerTrue.GetComponentInChildren<InteractionController>();
         //mainCamCom = playerMainCam.GetComponentInChildren<Camera>();
         playerIsDead = false;
     }
@@ -101,6 +103,12 @@ public class SceneManagerTG : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    public void ShowCursor()
+    {
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+        Debug.LogWarning("Showed Cursor");
+    }
     public void RestartIC()
     {
         StartCoroutine(ResetIC());

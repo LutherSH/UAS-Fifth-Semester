@@ -773,6 +773,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameOverScreen: {fileID: 1110075183}
+  endingPart: 1
   winScreen: {fileID: 952702530}
   playerTrue: {fileID: 242276617}
   playerMainCam: {fileID: 0}
