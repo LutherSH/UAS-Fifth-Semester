@@ -216224,8 +216224,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 1727952921}
+  selectedCommands:
+  - {fileID: 1727952928}
   variables: []
   description: 
   stepPause: 0
@@ -218160,7 +218162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 163
   indentLevel: 0
-  storyText: Heres the map of ehre their Trade Center gonna be
+  storyText: Heres the map of their Trade Center gonna be
   description: 
   character: {fileID: 0}
   portrait: {fileID: 0}

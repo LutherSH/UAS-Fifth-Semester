@@ -11,6 +11,7 @@ public class SceneManagerTG : MonoBehaviour
     public GameObject winScreen;
     public GameObject playerTrue;
     public GameObject playerMainCam;
+    [SerializeField] private static bool developerSkip = true;
     private Camera mainCamCom;
     private float delayGameOver = 0.03f;
     //private int sceneNummer;
@@ -40,6 +41,12 @@ public class SceneManagerTG : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+        }
+
+        if (developerSkip && Input.GetKeyUp(KeyCode.Keypad0))
+        {
+            //Debug.LogWarning("pressed");
+            NextStage();
         }
     }
     //////////////////////////////////////////////////////////
