@@ -1972,7 +1972,7 @@ GameObject:
   - component: {fileID: 10692539}
   - component: {fileID: 10692538}
   - component: {fileID: 10692537}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: NoWay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2427,7 +2427,7 @@ Transform:
   m_GameObject: {fileID: 11492749}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7195053, z: -0, w: -0.694487}
-  m_LocalPosition: {x: 1780.1, y: -221.1, z: -544.2001}
+  m_LocalPosition: {x: 1780.3, y: -221.1, z: -550.9}
   m_LocalScale: {x: 49.586, y: 199.82147, z: 269.44922}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55765,7 +55765,7 @@ GameObject:
   - component: {fileID: 335497101}
   - component: {fileID: 335497100}
   - component: {fileID: 335497099}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Mini Camp Found 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -137960,7 +137960,7 @@ GameObject:
   - component: {fileID: 832856564}
   - component: {fileID: 832856563}
   - component: {fileID: 832856562}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Info4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190794,7 +190794,7 @@ GameObject:
   - component: {fileID: 1169661679}
   - component: {fileID: 1169661678}
   - component: {fileID: 1169661677}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Info3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -217606,7 +217606,7 @@ GameObject:
   - component: {fileID: 1324548770}
   - component: {fileID: 1324548769}
   - component: {fileID: 1324548768}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Info1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -221792,7 +221792,7 @@ GameObject:
   - component: {fileID: 1349714845}
   - component: {fileID: 1349714844}
   - component: {fileID: 1349714843}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Start1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227878,6 +227878,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveTextUI: {fileID: 1051312347}
   objectivePanel: {fileID: 1936047550}
+  isChained: 1
 --- !u!1 &1392455698
 GameObject:
   m_ObjectHideFlags: 0
@@ -329702,7 +329703,7 @@ GameObject:
   - component: {fileID: 1975029123}
   - component: {fileID: 1975029122}
   - component: {fileID: 1975029121}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Info2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

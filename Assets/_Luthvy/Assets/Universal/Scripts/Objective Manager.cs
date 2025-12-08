@@ -8,6 +8,7 @@ public class ObjectiveManager : MonoBehaviour
     [Header("UI")]
     public TextMeshProUGUI objectiveTextUI;
     public GameObject objectivePanel; // Optional UI background panel
+    public bool isChained = false;
 
     private BaseEnemyEvent currentEvent;
 
@@ -43,7 +44,7 @@ public class ObjectiveManager : MonoBehaviour
         if (currentEvent != null && currentEvent.objectiveID == objectiveID)
         {
             ShowObjectiveText($"Objective Complete: {currentEvent.objectiveDescription}");
-            Invoke(nameof(HideObjectiveText), 2.5f); // Hide after 2.5 seconds
+            if(!isChained)Invoke(nameof(HideObjectiveText), 2.5f); // Hide after 2.5 seconds
         }
     }
     /////////////////////////////////////////////////////////////////////
